@@ -1,0 +1,136 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.esp.library.utilities.customcontrols.BodyText
+        android:id="@+id/tCurrencyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_gravity="start"
+        android:visibility="gone"
+        android:text="test"
+        custom:customfont="regular"
+        android:textColor="@color/cooltwogrey"
+        android:textSize="@dimen/_13ssp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/progresslayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp">
+
+                <ImageView
+                    android:id="@+id/is_file_downloaded"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:src="@drawable/ic_download_file"
+                    android:visibility="gone"
+
+                    />
+
+                <ProgressBar
+                    android:id="@+id/progressbar"
+                    style="@style/MyRoundProgressBar"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_toEndOf="@+id/is_file_downloaded"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/tValueLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                custom:customfont="regular"
+                android:textColor="@color/cooltwogrey"
+                android:textSize="@dimen/_11ssp" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/tValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tValueLabel"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:autoLink="web"
+                android:textColorLink="@color/hyperlinkcolor"
+                android:layout_toEndOf="@+id/progresslayout"
+                custom:customfont="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp" />
+
+            <ImageView
+                android:id="@+id/ivicon"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_below="@+id/tValueLabel"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/tValue"
+                android:src="@drawable/ic_show_calculated"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <!--<RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_70sdp">
+
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/tCurrencyValueLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                custom:customfont="regular"
+                android:textColor="@color/cooltwogrey"
+                android:textSize="@dimen/_11ssp" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/tCurrencyValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tCurrencyValueLabel"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:autoLink="web"
+                android:textColorLink="@color/hyperlinkcolor"
+                custom:customfont="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp" />
+
+        </RelativeLayout>-->
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

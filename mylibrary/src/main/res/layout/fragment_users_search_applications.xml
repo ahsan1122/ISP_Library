@@ -1,0 +1,132 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/view_bg">
+
+    <ProgressBar
+        android:id="@+id/progress_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/no_application_available_div"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center"
+        android:background="@color/white"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_no_application"
+                />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/message_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/norecord"
+                android:gravity="center"
+                android:textSize="@dimen/text_16"
+                custom:customfont="regular"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--<ProgressBar
+        android:id="@+id/progress_search"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        style="@style/MyProgressBar"
+        android:progress="0"
+        />-->
+
+
+
+
+    <com.esp.library.utilities.customcontrols.BodyText
+        android:id="@+id/search_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_12"
+        custom:customfont="bold"
+        android:textColor="@color/light_grey"
+        android:text="@string/zerorecordfound"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_10dp"
+        />
+
+    <com.esp.library.utilities.customcontrols.BodyText
+        android:id="@+id/txtrequestcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mid_grey"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginStart="@dimen/_10sdp"
+        custom:customfont="regular"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/view_bg"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:clipToPadding="false"
+            android:id="@+id/app_search_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+        <RelativeLayout
+            android:id="@+id/load_more_div"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:padding="@dimen/margin_5dp"
+
+            >
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loadingmore"
+                android:textSize="@dimen/text_14"
+                custom:customfont="regular"
+                android:textColor="@color/white"
+
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

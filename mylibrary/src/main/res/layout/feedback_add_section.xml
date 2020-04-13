@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_20sdp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/txtheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirmfeedback"
+            android:textColor="@color/lightblack"
+            android:textSize="@dimen/_20ssp"
+            custom:customfont="heavy" />
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/txtdescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selectitemfeedbacktext"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/lightblack"
+            android:textSize="@dimen/_13ssp"
+            custom:customfont="regular" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFieldLabel"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:hintTextAppearance="@style/AddApplicationTextLabel">
+
+            <com.esp.library.utilities.customcontrols.BodyEditText
+                android:id="@+id/txtcomment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="@string/yourcomment"
+                android:inputType="textMultiLine|textCapWords"
+                android:maxLines="5"
+                android:maxLength="1000"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                android:theme="@style/AddApplicationEditTextField"
+                custom:customfont="regular" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:id="@+id/llattachment"
+                android:layout_width="@dimen/_137sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:paddingStart="@dimen/_13sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingTop="@dimen/_6sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/draw_bg_green_stroke">
+
+                <ImageView
+                    android:id="@+id/attachicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/green"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_icons_inputs_attach_black"/>
+
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/tbtvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/attachicon"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_gravity="start"
+                    custom:customfont="light"
+                    android:text="@string/attachfile"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/_14ssp" />
+
+
+            </RelativeLayout>
+
+
+
+            <com.esp.library.utilities.customcontrols.CustomButton
+                android:id="@+id/btaddcomment"
+                android:layout_width="@dimen/_137sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/draw_bg_green"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_toEndOf="@+id/llattachment"
+                android:text="@string/add_comment"
+
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                custom:customfont="light" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlattachmentdetails"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/draw_bg_grey_stroke">
+
+
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                style="@style/MyRoundProgressBar"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_alignParentStart="true"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/txtacctehmentname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/progressbar"
+                android:layout_gravity="start"
+                android:singleLine="true"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:ellipsize="end"
+                custom:customfont="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp" />
+
+
+
+            <ImageView
+                android:id="@+id/attachtypeicon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_below="@+id/txtacctehmentname"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/txtextensionsize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/attachtypeicon"
+                android:layout_below="@+id/txtacctehmentname"
+                android:layout_gravity="start"
+                custom:customfont="regular"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_13ssp" />
+
+
+            <ImageView
+                android:id="@+id/ivdots"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/vertical_dots"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

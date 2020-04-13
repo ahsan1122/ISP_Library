@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/draw_bg_simple_green">
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/txtheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_16ssp"
+                custom:customfont="light" />
+
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/txtcancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="@string/cancel"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+
+        </RelativeLayout>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/draw_toolbar"></ImageView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/app_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlbar"
+            android:animationCache="true"
+            android:clipToPadding="false"
+            android:keepScreenOn="true"
+            android:padding="@dimen/_5sdp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+        </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lladdmore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_15sdp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus"
+            app:tint="@color/white"
+            app:backgroundTint="@color/green"
+            app:fabSize="normal"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

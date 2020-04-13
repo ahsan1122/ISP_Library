@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_15sdp"
+    android:gravity="center"
+    android:id="@+id/llparent"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/tilFieldDisableLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:background="@drawable/draw_bg_disable_fields_with_stroke"
+        android:visibility="gone"
+        app:hintTextAppearance="@style/AddApplicationTextLabel">
+
+    <com.esp.library.utilities.customcontrols.BodyEditText
+        android:id="@+id/etvalueDisable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:enabled="false"
+        android:paddingTop="@dimen/_6sdp"
+        android:autoLink="web"
+        android:inputType="textMultiLine"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        android:theme="@style/AddApplicationEditTextField"
+        custom:customfont="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFieldLabel"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:hintTextAppearance="@style/AddApplicationTextLabel">
+
+        <com.esp.library.utilities.customcontrols.BodyEditText
+            android:id="@+id/etValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:maxLength="1000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:theme="@style/AddApplicationEditTextField"
+            custom:customfont="bold" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <include
+        android:id="@+id/onlyviewlayout"
+        layout="@layout/item_add_application_field_type_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_minus10sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:visibility="gone" />
+
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.esp.library.utilities.customcontrols.BodyText
+        android:id="@+id/txttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        custom:customfont="regular"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_17sdp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/lllayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:orientation="vertical"></LinearLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:layout_gravity="center_horizontal">
+
+
+        <com.esp.library.utilities.customcontrols.CustomButton
+            android:id="@+id/btcancel"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/greyroundbuttonselector"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black" />
+
+        <com.esp.library.utilities.customcontrols.CustomButton
+            android:id="@+id/btadd"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginLeft="@dimen/_35sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/draw_signin_button"
+            android:text="@string/add"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

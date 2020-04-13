@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    >
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_margin="@dimen/margin_10dp"
+       >
+       <LinearLayout
+           android:id="@+id/RelativeLayout1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:background="@color/white"
+           android:gravity="center|start"
+           android:layout_alignParentTop="true"
+           android:layout_margin="@dimen/margin_15dp"
+           >
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="start|center"
+               >
+
+               <ImageView
+                   android:id="@+id/alert_icon"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerHorizontal="true"
+                   android:layout_centerVertical="true"
+                   android:src="@drawable/ic_warning_red"
+                   />
+               <com.esp.library.utilities.customcontrols.BodyText
+                   android:id="@+id/heading"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text=""
+                   android:textSize="@dimen/text_18"
+                   android:textColor="@color/dark_grey"
+                   custom:customfont="regular"
+                   />
+
+           </LinearLayout>
+
+
+           <com.esp.library.utilities.customcontrols.BodyText
+               android:id="@+id/detail"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/margin_10dp"
+               android:text=""
+               android:textSize="@dimen/text_14"
+               android:textColor="@color/dark_grey"
+               android:gravity="center|start"
+               android:layout_marginStart="@dimen/margin_5dp"
+
+
+
+               />
+
+
+
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:gravity="end"
+           android:layout_margin="@dimen/margin_15dp"
+           >
+           <com.esp.library.utilities.customcontrols.CustomButton
+               android:id="@+id/action_btn"
+               android:layout_width="wrap_content"
+               android:layout_height="@dimen/margin_40dp"
+               android:background="@drawable/draw_alert_button"
+               android:textColor="@color/green"
+               android:textSize="@dimen/text_14"
+               android:text=""
+               style="?android:attr/borderlessButtonStyle"
+               custom:customfont="regular"
+               android:gravity="end|center"
+               android:layout_marginEnd="@dimen/margin_10dp"
+
+               />
+           <com.esp.library.utilities.customcontrols.CustomButton
+               android:id="@+id/close"
+               android:layout_width="wrap_content"
+               android:layout_height="@dimen/margin_40dp"
+               android:background="@drawable/draw_alert_button"
+               android:textColor="@color/dark_grey"
+               android:textSize="@dimen/text_14"
+               android:text=""
+               style="?android:attr/borderlessButtonStyle"
+               custom:customfont="regular"
+               android:gravity="end|center"
+               android:layout_marginEnd="@dimen/margin_10dp"
+
+               />
+       </LinearLayout>
+   </LinearLayout>
+
+
+</RelativeLayout>

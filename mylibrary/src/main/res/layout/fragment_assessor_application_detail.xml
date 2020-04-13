@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_grey"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/detail_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pale_grey"
+            android:padding="@dimen/_12sdp">
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/submitted_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:text=""
+                custom:customfont="regular" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:orientation="vertical">
+                    <include
+                        android:id="@+id/linkdefinitioncard"
+                        layout="@layout/link_definition_card"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/lldetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.esp.library.utilities.customcontrols.BodyText
+                            android:id="@+id/txtrequestdetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingTop="@dimen/_12sdp"
+                            android:background="@color/white"
+                            android:paddingStart="@dimen/_9sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:paddingBottom="@dimen/_12sdp"
+                            android:text="@string/details"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15ssp"
+                            custom:customfont="light" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/very_light_grey_dim"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/app_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animationCache="true"
+                        android:clipToPadding="false"
+                        android:keepScreenOn="true">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+       <!-- <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:orientation="vertical">
+
+
+                <include
+                    android:id="@+id/linkdefinitioncard"
+                    layout="@layout/link_definition_card"
+                    android:visibility="gone" />
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/txtrequestdetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:text="@string/details"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15ssp"
+                    custom:customfont="light" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/light_grey"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/app_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animationCache="true"
+                    android:clipToPadding="false"
+                    android:keepScreenOn="true">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/no_record"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_no_application" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/txtnodata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_40dp"
+                android:gravity="center"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_16"
+                custom:customfont="regular" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

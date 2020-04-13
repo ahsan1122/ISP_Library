@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_width="match_parent"
+        android:background="@drawable/toolbar_curver"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center|start"
+            android:orientation="vertical">
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/toolbar_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp"
+                custom:customfont="heavy" />
+
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--<android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            android:src="@drawable/draw_toolbar"></ImageView>-->
+
+
+    <com.esp.library.utilities.customcontrols.BodyEditText
+        android:id="@+id/etxtsearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_toStartOf="@+id/ivfilter"
+        android:drawableLeft="@drawable/search_icon"
+        android:hint="@string/search_"
+        android:drawablePadding="@dimen/_5sdp"
+        android:drawableTint="@color/cooltwogrey"
+        android:background="@drawable/draw_bg_grey"
+        android:padding="@dimen/_7sdp"
+        android:textSize="@dimen/_11ssp"
+        android:theme="@style/AddApplicationEditTextField"
+        custom:customfont="regular" />
+
+    <RelativeLayout
+        android:id="@+id/no_results_available_div"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/card_error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:gravity="center"
+            android:text="@string/nolookuphere"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_12"
+            custom:customfont="bold" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/results_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:scrollbars="vertical"
+            android:background="@color/white">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+    <!--</LinearLayout>-->
+<!--    </android.support.v4.widget.NestedScrollView>-->
+</LinearLayout>

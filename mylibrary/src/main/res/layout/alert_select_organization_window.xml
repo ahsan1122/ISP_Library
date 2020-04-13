@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlmainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    >
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       >
+
+       <LinearLayout
+           android:id="@+id/RelativeLayout1"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1"
+           android:orientation="vertical"
+           android:background="@color/white"
+           android:gravity="center|start"
+           android:layout_alignParentTop="true"
+           >
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="start"
+               android:layout_margin="@dimen/margin_15dp"
+
+               >
+
+               <com.esp.library.utilities.customcontrols.BodyText
+                   android:id="@+id/accounts"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/accounts"
+                   android:textSize="@dimen/_15ssp"
+                   custom:customfont="regular"
+                   android:textColor="@color/dark_grey"
+                   android:layout_marginTop="@dimen/_10sdp"
+                   />
+
+               <com.esp.library.utilities.customcontrols.BodyText
+                   android:id="@+id/txtemail"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="@dimen/text_14"
+                   android:textColor="@color/light_grey"
+                   custom:customfont="regular"
+                   android:layout_marginTop="@dimen/margin_5dp"
+                   />
+
+           </LinearLayout>
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:background="@color/very_light_grey"
+               android:layout_marginTop="@dimen/margin_10dp"
+               ></RelativeLayout>
+           <androidx.recyclerview.widget.RecyclerView
+               android:clipToPadding="false"
+               android:id="@+id/org_list"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:animationCache="true"
+
+               >
+           </androidx.recyclerview.widget.RecyclerView>
+
+
+
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:gravity="end"
+           android:layout_margin="@dimen/margin_15dp"
+           >
+           <com.esp.library.utilities.customcontrols.CustomButton
+               android:id="@+id/close"
+               android:layout_width="wrap_content"
+               android:layout_height="@dimen/_25sdp"
+               android:background="?attr/selectableItemBackground"
+               android:textColor="@color/black"
+               android:textSize="@dimen/_12ssp"
+               android:text="@string/cancel"
+               android:textAllCaps="false"
+               style="?android:attr/borderlessButtonStyle"
+               custom:customfont="regular"
+               android:gravity="end|center"
+               android:layout_marginEnd="@dimen/margin_10dp"
+
+               />
+       </LinearLayout>
+   </LinearLayout>
+
+
+</RelativeLayout>

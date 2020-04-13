@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/black20</color>
+
+    <!--FOR ESP-->
+   <!-- <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color
+    <color name="green">@color/green</color>
+    <color name="button_start">#29b2cf</color>
+    <color name="button_end">#3de98f</color>-->
+
+
+    <!--FOR ISP-->
+    <color name="colorPrimary">#ff6a88</color>
+    <color name="colorPrimaryDark">#ff6a88</color>
+    <color name="colorAccent">#ff6a88</color>
+    <color name="green">#ff6a88</color>
+    <color name="button_start">#ff6a88</color>
+    <color name="button_end">#ff6a88</color>
+
+    <color name="white">#ffffff</color>
+    <color name="trans_white">#88ffffff</color>
+    <color name="transparent_color">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="lightblack">#303030</color>
+    <color name="grey">#aaadb8</color>
+    <color name="dark_grey">#263238</color>
+    <color name="mid_grey">#7f939f</color>
+    <color name="light_grey">#90a4ae</color>
+    <color name="pale_grey">#f6f7f9</color>
+    <color name="silver">#c6c9d2</color>
+    <color name="coolgrey">#9c9da6</color>
+    <color name="disablegrey">#199C9DA6</color>
+    <color name="cooltwogrey">#94959c</color>
+    <color name="very_light_grey">#e4e8eb</color>
+    <color name="very_light_grey_bg">#F5F7F8</color>
+    <color name="very_light_grey_trans">#88e4e8eb</color>
+    <color name="very_light_grey_dim">#4Daaadb8</color>
+    <color name="view_bg">#f9faff</color>
+    <color name="purpal">#b2b2b2</color>
+    <color name="bgcolor">#FAFBFF</color>
+    <color name="lightishBlue">#367dff</color>
+    <color name="hyperlinkcolor">#0964f6 </color>
+    <color name="idenedicolor">#205F8A</color>
+    <color name="lightidenedicolor">#308fcf</color>
+    <color name="lightBlueGrey">#cdd0d8</color>
+    <color name="whiteThree">#D6D6D6</color>
+    <color name="black20">#33303030</color>
+    <color name="hintgrey">#AAADB8</color>
+    <color name="dustyOrange">#f26648</color>
+    <color name="progrey">#F5F5F5</color>
+
+    <color name="status_new">#00aeef</color>
+    <color name="status_new_background">#1A00aeef</color>
+    <color name="status_draft">#9c9da6</color>
+    <color name="status_list_draft">#cdd0d8</color>
+    <color name="status_draft_background">#33CDD0D8</color>
+    <color name="status_pending">#E2AD00</color>
+    <color name="status_pending_background">#1AE2AD00</color>
+    <color name="status_rejected">#ef5350 </color>
+    <color name="status_rejected_background">#1Aef5350 </color>
+    <color name="status_accepted">#10c164</color>
+    <color name="status_accepted_background">#1A10c164</color>
+    <color name="status_invited">#9575cd</color>
+    <color name="status_invited_background">#1A9575cd</color>
+    <color name="status_locked">#9c9da6</color>
+    <color name="status_locked_background">#33CDD0D8</color>
+
+
+
+</resources>

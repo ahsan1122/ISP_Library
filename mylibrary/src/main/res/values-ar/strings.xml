@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+
+    <string name="app_name">ESP</string>
+
+    <string name="welcometoesp">مرحبًا بكم في ESP</string>
+
+    <string name="signout">خروج</string>
+
+    <string name="email">البريد الإلكتروني</string>
+
+    <string name="login_password_label">كلمه السر</string>
+
+    <string name="sign_in">تسجيل الدخول</string>
+
+    <string name="forgotpassword">هل نسيت كلمة المرور؟</string>
+
+    <string name="language">لغة:</string>
+
+    <string name="enteremailandpassword">الرجاء إدخال البريد الإلكتروني وكلمة المرور لتسجيل الدخول</string>
+
+    <string name="password">كلمه السر</string>
+
+    <string name="acceptcriteri">قبول المعايير</string>
+
+    <string name="acceptcriteria">قبول. المعايير</string>
+
+    <string name="action_menu_remove">إزالة</string>
+
+    <string name="add">"إضافة "</string>
+
+    <string name="add_comment">"أضف تعليق "</string>
+
+    <string name="added">وأضاف</string>
+
+    <string name="admin">مشرف</string>
+
+    <string name="adminsmall">applicantsmall</string>
+
+    <string name="alert">محزر</string>
+
+    <string name="all">الكل</string>
+
+    <string name="and">و</string>
+
+    <string name="any">أي</string>
+
+    <string name="by_status">حسب الحالة</string>
+
+    <string name="applicant_error">أنت لست مقدم طلب.</string>
+
+    <string name="appnotavailable">افتح هذا الملف ، التطبيق غير متاح</string>
+
+    <string name="cancel">إلغاء</string>
+
+    <string name="category">الفئة</string>
+
+    <string name="categorysmall">الفئة</string>
+
+    <string name="characters">الشخصيات</string>
+
+    <string name="choose">أختر</string>
+
+    <string name="choose_file">حدد ملف</string>
+
+    <string name="choose_organization">يرجى اختيار الحساب من أدناه</string>
+
+    <string name="completed">منجز</string>
+
+    <string name="condition">شرط</string>
+
+    <string name="criteria_feedback">معايير التقييم</string>
+
+    <string name="criterias">المقاييس</string>
+
+    <string name="currency">دقة</string>
+
+    <string name="data_available">البيانات المتاحة!</string>
+
+    <string name="day">يوم</string>
+
+    <string name="defaultt">افتراضي</string>
+
+    <string name="definition">فريف</string>
+
+    <string name="discard">تجاهل</string>
+
+    <string name="draft">مشروع</string>
+
+    <string name="edit_comment">تعديل التعليق</string>
+
+    <string name="edit_comments">تعديل التعليق</string>
+
+    <string name="empty_directory">دليل فارغ</string>
+
+    <string name="enterbaseurl">أدخل عنوان url الأساسي</string>
+
+    <string name="enterprise_submission_platform">منصة تقديم المشاريع</string>
+
+    <string name="invoice_submission_platform">منصة تقديم الفاتورة</string>
+
+    <string name="enterurl">إدخال عنوان الموقع</string>
+
+    <string name="entervalidurl">أدخل عنوان URL الأساسي صالح</string>
+
+    <string name="error">خطأ</string>
+
+    <string name="error_selecting_file">خطأ في اختيار ملف</string>
+
+    <string name="errorclosingthumbnail">خطأ في إغلاق الصورة المصغرة</string>
+
+    <string name="errorcreatingnewfile">خطأ في إنشاء ملف جديد</string>
+
+    <string name="errorwritingthumbnail">خطأ في كتابة الصورة المصغرة</string>
+
+    <string name="expired">تم رفض التفويض لهذا الطلب.</string>
+
+    <string name="feedback">ردود الفعل</string>
+
+    <string name="filter">منقي</string>
+
+    <string name="filter_error">مرشح غير مطبق</string>
+
+    <string name="filters">مرشحات</string>
+
+    <string name="forgot_password">هل نسيت كلمة المرور</string>
+
+    <string name="found">وجدت</string>
+
+    <string name="gender">جنس</string>
+
+    <string name="hidden">مخفي</string>
+
+    <string name="internal_storage">التخزين الداخلي</string>
+
+    <string name="internet_connection_error">يرجى التحقق من اتصالك بالإنترنت</string>
+
+    <string name="internet_error_heading">لا يوجد اتصال بالإنترنت ، يرجى التحقق من اتصال الإنترنت والمحاولة مرة أخرى</string>
+
+    <string name="invalidemail">البريد الإلكتروني غير صالح</string>
+
+    <string name="invalidlink">الرجاء إدخال رابط صالح</string>
+
+    <string name="invalidnumber">الرجاء إدخال رقم صحيح</string>
+
+    <string name="itseasy">. من السهل يستغرق أقل من دقيقتين ، نحن نعد!</string>
+
+    <string name="label_currency">دقة</string>
+
+    <string name="length_password_error">يجب أن تحتوي كلمة المرور على 6 أحرف كحد أدنى</string>
+
+    <string name="loadingmore">تحميل المزيد ..</string>
+
+    <string name="locked">مقفل</string>
+
+    <string name="login_email_error">الرجاء إدخال البريد الإلكتروني</string>
+
+    <string name="login_email_label">البريد الإلكتروني</string>
+
+    <string name="login_error">معرف تسجيل الدخول أو كلمة المرور غير صحيحة!</string>
+
+    <string name="login_error_account_locked">حسابك مغلق.</string>
+
+    <string name="login_error_locked">بيانات الاعتماد غير صالحة. تم قفل حسابك لمدة 30 دقيقة بسبب محاولات تسجيل دخول فاشلة متعددة</string>
+
+    <string name="login_error_remaining1">بيانات الاعتماد غير صالحة. لديك محاولة واحدة أخرى قبل إغلاق حسابك.</string>
+
+    <string name="login_error_remaining2">بيانات الاعتماد غير صالحة. لديك محاولتان أخريان قبل إغلاق حسابك.</string>
+
+    <string name="login_error_remaining3">بيانات الاعتماد غير صالحة. لديك 3 محاولات أخرى قبل إغلاق حسابك.</string>
+
+    <string name="login_label">تسجيل الدخول</string>
+
+    <string name="login_valid_email_error">يرجى إدخال البريد الإلكتروني الصحيح</string>
+
+    <string name="login_valid_password_error">الرجاء إدخال كلمة المرور</string>
+
+    <string name="my">لي</string>
+
+    <string name="my_space">بلدي الفضاء</string>
+
+    <string name="navigation_drawer_close">إغلاق مرشح</string>
+
+    <string name="navigation_drawer_open">مرشح مفتوح</string>
+
+    <string name="no">لا</string>
+
+    <string name="no_cat_error">لم يتم العثور على الفئة!</string>
+
+    <string name="no_criteria_feedback_comments">لا يوجد أي ملاحظات المعايير.</string>
+
+    <string name="no_defination_error">لم يتم العثور على تعريف!</string>
+
+    <string name="nocomments">لا تعليقات!</string>
+
+    <string name="nocriteriaavailable">لا توجد معايير متاحة!</string>
+
+    <string name="nofeedbackavailable">لا توجد ردود فعل متاحة!</string>
+
+    <string name="nolookuphere">لا بحث هنا!</string>
+
+    <string name="nostageavaialable">لا المرحلة المتاحة!</string>
+
+    <string name="ok">حسنا</string>
+
+    <string name="open">افتح</string>
+    <string name="opencaps">افتح</string>
+
+    <string name="please_add_comment">يرجى إضافة تعليق</string>
+
+    <string name="pleasetryagain">حاول مرة اخرى</string>
+
+    <string name="pleasewait">ارجوك انتظر…</string>
+
+    <string name="profile">الملف الشخصي</string>
+
+    <string name="profile_error_cancel">إلغاء</string>
+
+    <string name="profile_error_desc">اه ، لا يمكنك تقديم طلب حتى تملأ ملفك الشخصي!</string>
+
+    <string name="profile_error_desc_admin">اه ، لا يمكنك تقديم الطلب ، يرجى الاتصال بالمشرف!</string>
+
+    <string name="profile_error_heading">ملف تعريف غير كامل</string>
+
+    <string name="profile_error_ok">خذني إلى الملف الشخصي</string>
+
+    <string name="reject">رفض</string>
+
+    <string name="reject_comments_hints_one_comment">يرجى تقديم تعليق واحد على الأقل لـ</string>
+
+    <string name="reject_title">هل ترفض هذه المعايير؟</string>
+
+    <string name="rejectcriteria">رفض المعايير</string>
+
+    <string name="request">طلب</string>
+
+    <string name="request_reject_error">تم رفض هذا الطلب تذكرة غير صحيحة. يرجى تقديم طلب جديد مع المعلومات الصحيحة.</string>
+
+    <string name="reset">إعادة تعيين</string>
+
+    <string name="resubmitapp">هل تريد إعادة التقديم</string>
+
+    <string name="result">نتيجة</string>
+
+    <string name="results">نتيجة</string>
+
+    <string name="save">حفظ</string>
+
+    <string name="save_draft">حفظ المسودة</string>
+
+    <string name="save_draft_ok">حفظ كمسودة</string>
+
+    <string name="savedraft">حفظ المسودة</string>
+
+    <string name="search_">بحث</string>
+
+    <string name="selectafile">حدد ملف</string>
+
+    <string name="sequence">تسلسل</string>
+
+    <string name="shown">أظهرت</string>
+
+    <string name="sizeshouldbelessthen">يجب أن يكون الحجم أقل من ذلك</string>
+
+    <string name="some_thing_went_wrong">حدث خطأ ما. أعد المحاولة من فضلك</string>
+
+    <string name="stages">مراحل</string>
+
+    <string name="startsubmittingapp">ابدأ بتقديم الأول</string>
+
+    <string name="storage_removed">تمت إزالة التخزين أو إلغاء تحميله.</string>
+
+    <string name="submit">خضع</string>
+
+    <string name="submitted_on">تم إرساله</string>
+
+    <string name="submittedon">تم إرساله</string>
+
+    <string name="successfailed">فشل النجاح</string>
+
+    <string name="thumbnail">المصغرات</string>
+
+    <string name="valuebetween">يجب أن تكون القيمة بين</string>
+
+    <string name="valuegreater">يجب أن تكون القيمة أكبر من</string>
+
+    <string name="valuegreaterequalto">يجب أن تكون القيمة أكبر أو تساوي</string>
+
+    <string name="valueless">يجب أن تكون القيمة أقل من</string>
+
+    <string name="valuelessequalto">يجب أن تكون القيمة أقل أو تساوي</string>
+
+    <string name="wasnotsubmitted">لم يقدم بعد.</string>
+
+    <string name="welcome">أهلا بك</string>
+
+    <string name="yes">نعم فعلا</string>
+
+    <string name="youaredevelopernow">أنت مطور الآن</string>
+
+    <string name="your">ك</string>
+
+    <string name="zerorecordfound">تم العثور على 0 سجل</string>
+    <string name="logineithidenedi">تسجيل الدخول باستخدام IDENEDI</string>
+    <string name="norecordstofilter">لا توجد سجلات لتصفية</string>
+    <string name="notacceptrequest">لا نقبل حاليًا الطلبات لـ</string>
+    <string name="contactadministrator">يرجى المحاولة مرة أخرى لاحقًا أو اتصل بمسؤول النظام للحصول على مزيد من التفاصيل.</string>
+    <string name="closingdatepassed">انقضى تاريخ إغلاق قبول الطلبات</string>
+    <string name="newversionavailable">يتوفر إصدار جديد</string>
+    <string name="updatenow">تحديث الان</string>
+    <string name="newversionavailabletext">يتوفر إصدار جديد من هذا التطبيق في متجر Play ، يرجى تنزيل إصدار جديد من هذا التطبيق.</string>
+    <string name="requestedby">بتوصية من:</string>
+    <string name="requests">الطلبات</string>
+    <string name="by_definition">حسب التعريفات</string>
+    <string name="sortby">ترتيب حسب</string>
+    <string name="closed">مغلق</string>
+    <string name="closedsmall">مغلق</string>
+    <string name="parentapplication">التطبيق الأصلي:</string>
+    <string name="definition_filter_error">يرجى تحديد مرشح تعريف واحد على الأقل للمتابعة</string>
+    <string name="under_satus">قيد الانتظار</string>
+    <string name="approved">وافق</string>
+    <string name="rejected">مرفوض</string>
+    <string name="addcommenttoproceed">يرجى إضافة تعليق للمتابعة</string>
+    <string name="categories">التصنيفات</string>
+    <string name="assessor">مخمن</string>
+    <string name="applicant">طالب وظيفة</string>
+    <string name="applicants">المتقدمين</string>
+    <string name="applications">التطبيقات</string>
+    <string name="application">تطبيق</string>
+    <string name="applicantcolon">طالب وظيفة:</string>
+    <string name="applicantsmall">طالب وظيفة</string>
+    <string name="yesdelete">نعم ، احذف</string>
+    <string name="criteria">المعايير</string>
+    <string name="durationcolon">المدة الزمنية:</string>
+    <string name="ownercolon">صاحب:</string>
+    <string name="pending">قيد الانتظار</string>
+    <string name="inprogress">في تقدم</string>
+    <string name="current">تيار</string>
+    <string name="accepted">قبلت</string>
+    <string name="acceptedsmall">قبلت</string>
+    <string name="logintolink">تسجيل الدخول للربط</string>
+    <string name="idenedinotlinkedtext">حساب IDENEDI غير مرتبط بـ ESP. لربط حساب IDENEDI الخاص بك بـ ESP ، يرجى تسجيل الدخول أدناه باستخدام بيانات اعتماد ESP \"Exceeders\" أو الاتصال بالإدارة.</string>
+    <string name="resubmit">إعادة التقديم</string>
+    <string name="resubmitapplication">إعادة تقديم الطلب</string>
+    <string name="addcomment">أضف تعليق</string>
+    <string name="areyousure">هل أنت متأكد أنك تريد حذف</string>
+    <string name="cancelled">ألغيت</string>
+    <string name="beforereject">قبل رفض</string>
+    <string name="accept_title">هل أنت متأكد أنك تريد قبول هذه المعايير؟</string>
+    <string name="yourcomment">تعليقك</string>
+    <string name="post_comment">أضف تعليقا</string>
+    <string name="edit_feedback">تعديل التعليقات</string>
+    <string name="edit">تعديل</string>
+    <string name="member">عضو</string>
+    <string name="submitrequest">تقديم الطلب</string>
+    <string name="addperiod">أضف فترة</string>
+    <string name="acceptedon">مقبولة في:</string>
+    <string name="rejectedon">تم الرفض في:</string>
+    <string name="emailcolon">البريد الإلكتروني:</string>
+    <string name="profiletype">نوع الملف الشخصي</string>
+    <string name="or">أو</string>
+    <string name="loading">جار التحميل...</string>
+    <string name="user">المستعمل</string>
+    <string name="accept">قبول</string>
+    <string name="actioncenter">مركز التحكم</string>
+    <string name="approve">يوافق</string>
+    <string name="clearfilter">مرشح واضح</string>
+    <string name="applyfilter">تطبيق عامل التصفية</string>
+    <string name="days">أيام</string>
+    <string name="definitions">تعريفات</string>
+    <string name="mb">ميغابايت</string>
+    <string name="draftcaps">مشروع</string>
+    <string name="submissionrequest">طلبات التقديم</string>
+    <string name="version">الإصدار:</string>
+    <string name="neww">جديد</string>
+    <string name="rejectedsmall">مرفوض</string>
+    <string name="pendingsmall">قيد الانتظار</string>
+    <string name="value">القيمة</string>
+    <string name="feedbackdetail">سيكون لديك القدرة على ترك تعليق عندما سيتم إغلاق الطلب.</string>
+    <string name="active">نشيط</string>
+    <string name="activecaps">نشيط</string>
+    <string name="reassigned">أعيد تعيينه</string>
+    <string name="complete">اكتمال</string>
+    <string name="completedcaps">اكتمال</string>
+    <string name="link">حلقة الوصل</string>
+    <string name="base">يتمركز</string>
+    <string name="completeprofile">أكمل ملفك الشخصي</string>
+    <string name="completeprofiletext">من أجل تقديم الطلب ، تحتاج إلى إكمال ملف التعريف الخاص بك.</string>
+    <string name="continuee">استمر</string>
+    <string name="next">التالى</string>
+    <string name="addyourpicture">أضف صورتك</string>
+    <string name="addyourpicturetext">يرجى تحميل صورتك وانقر فوق التالي</string>
+    <string name="fullnamee">الاسم بالكامل</string>
+    <string name="lastupdatedon">تاريخ آخر تحديث</string>
+    <string name="camera">الة تصوير</string>
+    <string name="gallery">صالة عرض</string>
+    <string name="addmore">أضف المزيد</string>
+    <string name="name">اسم</string>
+    <string name="delete">حذف</string>
+    <string name="deleterequest">حذف طلب</string>
+    <string name="accounts">حسابات</string>
+    <string name="invited">مدعو</string>
+    <string name="attachfile">أرفق ملف</string>
+    <string name="new_satus">أجديد</string>
+    <string name="takemetoprofile">خذني إلى الملف الشخصي</string>
+    <string name="employee">موظف</string>
+    <string name="additemlist">أضف قائمة العناصر</string>
+    <string name="searchlookupitem">بحث عن عنصر بحث ...</string>
+    <string name="emptyitemlist">عذرًا ، ليس لديك أي عناصر قائمة</string>
+    <string name="details">تفاصيل</string>
+    <string name="submissiondetails">تفاصيل التقديم</string>
+    <string name="requestdetails">طلب تفاصيل</string>
+    <string name="subapplications">تطبيقات فرعية</string>
+    <string name="subdefinition">التعريف الفرعي:</string>
+    <string name="norecord">لا يوجد سجلات!</string>
+    <string name="requestnumber">رقم الطلب:</string>
+    <string name="confirmfeedback">تأكيد الملاحظات</string>
+    <string name="rejectfeedback">تأكيد الرفض</string>
+    <string name="confirmacceptance">تأكيد القبول</string>
+    <string name="confirm">تؤكد</string>
+    <string name="selectitemfeedbacktext">يرجى تحديد العنصر الذي تريد جعله مرئيًا للموظفين</string>
+    <string name="reasonfordecline">سبب الرفض:</string>
+    <string name="categorycolon">الفئة:</string>
+    <string name="idenediid">معرف iDENEDi:</string>
+    <string name="submittedoncolon">تم إرساله:</string>
+    <string name="pendingfor">معلقة ل:</string>
+    <string name="submitted">قدمت</string>
+    <string name="submissions">التقديمات</string>
+    <string name="submissionszero">التقديمات (0)</string>
+    <string name="approvalstages">مراحل الموافقة</string>
+    <string name="approvalstage">مرحلة الموافقة</string>
+    <string name="requestcolon">طلب:</string>
+    <string name="selectapplication">حدد التطبيق</string>
+    <string name="linkdefinition">تعريف الارتباط</string>
+    <string name="definition_name">اسم التعريف</string>
+    <string name="submissionsallowed">يسمح التقديم</string>
+    <string name="submissionsstopped">تم إيقاف التقديمات</string>
+    <string name="viewapplications">عرض التطبيقات</string>
+    <string name="stopsubmission">أوقف التقديم</string>
+    <string name="requesttoaction">طلب العمل</string>
+    <string name="seeall">اظهار الكل</string>
+    <string name="allowsubmission">السماح بالتقديم</string>
+    <string name="stopsubmissiontext">هل أنت متأكد من أنك تريد التوقف عن السماح بتقديم هذا التعريف؟</string>
+    <string name="allowsubmissiontext">هل أنت متأكد من أنك تريد السماح بتقديم هذا التعريف؟</string>
+    <string name="moreinformation">معلومات اكثر</string>
+    <string name="lessinformation">معلومات أقل</string>
+    <string name="formisempty">النموذج فارغ</string>
+    <string name="form">شكل</string>
+    <string name="reassign">إعادة تعيين</string>
+    <string name="selectusers">اختر المستخدم</string>
+    <string name="nousersfound">لم يتم العثور على مستخدمين!</string>
+    <string name="nofilesattached">لم يتم إرفاق أي ملفات</string>
+    <string name="attachedfiles">الملفات المرفقة</string>
+    <string name="suboldestfirst">المقدمة: الأقدم أولاً</string>
+    <string name="assignoldestfirst">المعين: الأقدم أولاً</string>
+    <string name="subnewestfirst">المقدمة: الأحدث أولاً</string>
+    <string name="assignnewestfirst">المعين: الأحدث أولاً</string>
+    <string name="duefirst">تاريخ الاستحقاق: أولاً</string>
+    <string name="duelast">تاريخ الاستحقاق: الأخير</string>
+
+</resources>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/pale_grey"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/ToolbarStyle"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/toolbarheading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/approvalstage"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_17ssp"
+                    custom:customfont="heavy" />
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/toolbarcategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text=""
+                    android:textColor="@color/light_grey"
+                    android:textSize="@dimen/text_14"
+                    android:visibility="gone"
+                    custom:customfont="regular" />
+
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            android:src="@drawable/draw_toolbar"></ImageView>
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lldetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_17sdp"
+        android:layout_toEndOf="@+id/txtline"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/txtStagename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:text="@string/stages"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp"
+                custom:customfont="bold" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/txtstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlcondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp">
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/conditiontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/condition"
+                android:textColor="@color/coolgrey"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/conditiontextvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_toEndOf="@+id/conditiontext"
+                android:text="@string/condition"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp">
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/sequencetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sequence"
+                android:textColor="@color/coolgrey"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/sequencetextvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_toEndOf="@+id/sequencetext"
+                android:text="@string/sequence"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlacceptreject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp">
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/acceptencetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/acceptcriteria"
+                android:textColor="@color/coolgrey"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/acceptencetextvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_toEndOf="@+id/acceptencetext"
+                android:text="@string/acceptcriteria"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/pale_grey"
+            android:orientation="vertical">
+
+    <com.esp.library.utilities.customcontrols.BodyText
+        android:id="@+id/txtcriteria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/criteria"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textColor="@color/coolgrey"
+        android:textSize="@dimen/_13ssp"
+        custom:customfont="regular" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCrietrias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:animationCache="true"
+        android:clipToPadding="false"
+        android:keepScreenOn="true" />
+
+    </LinearLayout>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

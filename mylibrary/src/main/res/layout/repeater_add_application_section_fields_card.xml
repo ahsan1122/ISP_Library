@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:id="@+id/llparentlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/tvSectionSubHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/ibRemoveCard"
+                android:paddingEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:text="@string/defaultt"
+                android:textColor="@color/cooltwogrey"
+                android:textSize="@dimen/_15ssp"
+                custom:customfont="regular" />
+
+
+            <ImageButton
+                android:id="@+id/ibRemoveCard"
+                style="?actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_dots"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFields"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animationCache="true"
+            android:clipToPadding="false"
+            android:keepScreenOn="true" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

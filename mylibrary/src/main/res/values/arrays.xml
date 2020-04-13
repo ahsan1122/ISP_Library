@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="status">
+        <item>@string/all</item>
+        <item>@string/new_satus</item>
+        <item>@string/under_satus</item>
+        <item>@string/accepted</item>
+        <item>@string/rejected</item>
+        <item>@string/cancelled</item>
+    </array>
+
+    <array name="status_enum">
+        <item>@string/all_enum</item>
+        <!-- <item>@string/new_satus</item>
+         <item>@string/under_satus</item>-->
+        <item>@string/accepted_enum</item>
+        <item>@string/rejected_enum</item>
+        <item>@string/cancelled_enum</item>
+    </array>
+
+</resources>

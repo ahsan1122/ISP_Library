@@ -1,0 +1,262 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_bg"
+    android:orientation="vertical"
+
+    >
+
+
+    <LinearLayout
+        android:id="@+id/no_application_available_div"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_no_application" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/txtnoapplicationadded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/margin_40dp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="center"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_16"
+                custom:customfont="regular" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/detail_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_error_text"
+                android:layout_marginStart="@dimen/margin_30dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/margin_30dp"
+                android:gravity="center"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_12"
+                custom:customfont="regular" />
+
+
+            <com.esp.library.utilities.customcontrols.CustomButton
+                android:id="@+id/add_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:layout_marginStart="@dimen/margin_50dp"
+                android:layout_marginTop="@dimen/margin_50dp"
+                android:layout_marginEnd="@dimen/margin_50dp"
+                android:visibility="gone"
+                android:background="@drawable/draw_signin_button"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14"
+                custom:customfont="regular" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_below="@+id/txtrequestcount"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/application_list_div"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/view_bg">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2"
+    android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlcardstack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container_cards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                shimmer:duration="500">
+
+                <!-- Adding 5 rows of placeholders -->
+                <LinearLayout
+                    android:id="@+id/shimmerlayout_cards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/definition_list_placeholder_layout" />
+                    <include layout="@layout/definition_list_placeholder_layout" />
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/txtrequesttoscreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cooltwogrey"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/requesttoaction"
+                android:textSize="@dimen/_12ssp"
+                custom:customfont="regular" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/txtseeall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/seeall"
+                android:layout_alignParentEnd="true"
+                android:textSize="@dimen/_12ssp"
+                custom:customfont="regular" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/txtloadmorecards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:text="@string/loadingmore"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/_12ssp"
+                custom:customfont="regular" />
+
+            <com.esp.library.exceedersesp.controllers.tindercard.CardStackView
+                android:id="@+id/card_stack_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txtrequesttoscreen"
+                android:padding="4dp"
+                android:clipToPadding="false">
+            </com.esp.library.exceedersesp.controllers.tindercard.CardStackView>
+
+
+
+
+
+        </RelativeLayout>
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/txtrequestcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cooltwogrey"
+            android:layout_below="@+id/rlcardstack"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            custom:customfont="regular"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtrequestcount">
+
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical"
+                shimmer:duration="500">
+
+                <!-- Adding 5 rows of placeholders -->
+                <LinearLayout
+                    android:id="@+id/shimmerlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/definition_list_placeholder_layout" />
+                    <include layout="@layout/definition_list_placeholder_layout" />
+                    <include layout="@layout/definition_list_placeholder_layout" />
+                    <include layout="@layout/definition_list_placeholder_layout" />
+                    <include layout="@layout/definition_list_placeholder_layout" />
+                    <include layout="@layout/definition_list_placeholder_layout" />
+                    <include layout="@layout/definition_list_placeholder_layout" />
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/app_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animationCache="true"
+                android:clipToPadding="false">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+
+</LinearLayout>
+        <RelativeLayout
+            android:id="@+id/load_more_div"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/green"
+            android:gravity="center"
+            android:padding="@dimen/margin_5dp"
+            android:visibility="gone"
+
+            >
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loadingmore"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14"
+                custom:customfont="regular"
+
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

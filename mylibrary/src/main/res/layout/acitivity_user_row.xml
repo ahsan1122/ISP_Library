@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlitem"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_height="wrap_content">
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivuser"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:src="@drawable/default_profile_picture" />
+
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/txtusername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_toEndOf="@+id/ivuser"
+            android:text="@string/selectapplication"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            custom:customfont="light" />
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/txtuseremail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtusername"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_toEndOf="@+id/ivuser"
+            android:text="@string/selectapplication"
+            android:textColor="@color/light_grey"
+            android:textSize="@dimen/_10ssp"
+            custom:customfont="regular" />
+    </RelativeLayout>
+</LinearLayout>

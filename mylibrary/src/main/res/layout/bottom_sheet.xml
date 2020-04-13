@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="@dimen/_50sdp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:id="@+id/rlbottomSheetHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@drawable/draw_bg_submission_request">
+
+
+        <ImageView
+            android:id="@+id/ivicon"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:src="@drawable/icon_submission_request" />
+
+
+        <ImageView
+            android:id="@+id/ivarrow"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:src="@drawable/ic_arrow_up"
+            android:tint="@color/white" />
+
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/txtsubmissionrequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/ivicon"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"
+            custom:customfont="light" />
+
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp"
+        android:src="@drawable/draw_toolbar"></ImageView>
+    <RelativeLayout
+        android:id="@+id/searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_6sdp">
+
+
+        <com.esp.library.utilities.customcontrols.BodyEditText
+            android:id="@+id/etxtsearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/ivfilter"
+            android:drawableStart="@drawable/search_icon"
+            android:drawablePadding="@dimen/_5sdp"
+            android:hint="@string/search_"
+            android:maxLines="1"
+            android:inputType="text"
+            android:drawableTint="@color/cooltwogrey"
+            android:background="@drawable/draw_bg_grey"
+            android:padding="@dimen/_7sdp"
+            android:imeOptions="actionDone"
+            android:textSize="@dimen/_11ssp"
+            android:theme="@style/AddApplicationEditTextField"
+            custom:customfont="regular" />
+
+        <ImageView
+            android:id="@+id/ivfilter"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/filter"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/filter" />
+
+
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:clipToPadding="false"
+        android:id="@+id/filter_horizontal_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:visibility="gone"
+        android:animationCache="true"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/application_list_div"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/listcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cooltwogrey"
+            android:layout_margin="@dimen/_7sdp"
+            android:textSize="@dimen/_11ssp"
+            custom:customfont="regular"
+            />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sub_defination_list"
+            android:layout_below="@+id/listcount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

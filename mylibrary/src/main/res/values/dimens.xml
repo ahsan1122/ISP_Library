@@ -1,0 +1,58 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="text_8">8dp</dimen>
+    <dimen name="text_9">9dp</dimen>
+    <dimen name="text_10">10dp</dimen>
+    <dimen name="text_11">11dp</dimen>
+    <dimen name="text_12">12dp</dimen>
+    <dimen name="text_13">13sp</dimen>
+    <dimen name="text_14">14dp</dimen>
+    <dimen name="text_16">16dp</dimen>
+    <dimen name="text_18">18dp</dimen>
+    <dimen name="text_20">20dp</dimen>
+    <dimen name="text_22">22dp</dimen>
+    <dimen name="text_26">26dp</dimen>
+    <dimen name="text_30">30dp</dimen>
+    <dimen name="text_34">34dp</dimen>
+    <dimen name="text_36">36dp</dimen>
+
+    <dimen name="margin_3dp">3dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_25dp">25dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="margin_35dp">35dp</dimen>
+    <dimen name="margin_40dp">40dp</dimen>
+    <dimen name="margin_45dp">55dp</dimen>
+    <dimen name="margin_50dp">50dp</dimen>
+    <dimen name="margin_55dp">55dp</dimen>
+    <dimen name="margin_60dp">60dp</dimen>
+    <dimen name="margin_160dp">160dp</dimen>
+    <dimen name="margin_280dp">280dp</dimen>
+
+
+    <dimen name="top_heading">22dp</dimen>
+    <dimen name="splash_heading">30dp</dimen>
+    <dimen name="large_heading">34dp</dimen>
+    <dimen name="intro_button_margins">20dp</dimen>
+    <dimen name="margin_signs_button_top">10dp</dimen>
+    <dimen name="margin_signs">5dp</dimen>
+    <dimen name="intro_bg_image_margin">10dp</dimen>
+    <dimen name="intro_swip_height">240dp</dimen>
+    <dimen name="intro_text_margin">20dp</dimen>
+    <dimen name="valet_div_margin">15dp</dimen>
+    <dimen name="intro_text_margins">10dp</dimen>
+    <dimen name="intro_text_margins_left_right">10dp</dimen>
+    <dimen name="page_margin">5dp</dimen>
+    <dimen name="margin_page_top">10dp</dimen>
+    <dimen name="list_item_padding">16dp</dimen>
+
+
+
+</resources>

@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/_15sdp"
+    android:orientation="vertical">
+
+    <com.esp.library.utilities.customcontrols.BodyText
+        android:id="@+id/tValueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_gravity="start"
+        custom:customfont="regular"
+        android:textColor="@color/cooltwogrey"
+        android:textSize="@dimen/_14ssp" />
+
+
+    <RelativeLayout
+        android:id="@+id/llattachment"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_13sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:layout_gravity="start"
+        android:background="@drawable/draw_bg_green_stroke">
+
+        <ImageView
+            android:id="@+id/attachicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/green"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:src="@drawable/ic_icons_inputs_attach_black"/>
+
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/tbtvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/attachicon"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_gravity="start"
+            custom:customfont="light"
+            android:text="@string/attachfile"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_14ssp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlattachmentdetails"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/draw_bg_grey_stroke">
+
+
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="@style/MyRoundProgressBar"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_alignParentStart="true"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/txtacctehmentname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/progressbar"
+            android:layout_gravity="start"
+            android:singleLine="true"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:ellipsize="end"
+            custom:customfont="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp" />
+
+
+
+        <ImageView
+            android:id="@+id/attachtypeicon"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_below="@+id/txtacctehmentname"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/txtextensionsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/attachtypeicon"
+            android:layout_below="@+id/txtacctehmentname"
+            android:layout_gravity="start"
+            custom:customfont="regular"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_13ssp" />
+
+
+        <ImageView
+            android:id="@+id/ivdots"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/vertical_dots"/>
+
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/onlyviewlayout"
+        android:visibility="gone"
+        layout="@layout/item_add_application_field_type_text_view"/>
+
+</LinearLayout>

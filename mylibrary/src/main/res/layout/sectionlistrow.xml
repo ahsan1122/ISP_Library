@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/parent_layout"
+    android:background="@drawable/draw_bg_white"
+    android:layout_marginTop="@dimen/_7sdp"
+    android:layout_marginEnd="@dimen/_7sdp"
+    android:layout_marginStart="@dimen/_7sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlclick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_14sdp">
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/etxtsectionname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/ivwarning"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_16ssp"
+            custom:customfont="heavy" />
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/etxttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etxtsectionname"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/ivwarning"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColor="@color/mid_grey"
+            android:visibility="gone"
+            android:textSize="@dimen/_13ssp"
+            custom:customfont="regular" />
+
+
+        <ImageView
+            android:id="@+id/ivarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:tint="@color/grey"
+            android:src="@drawable/ic_arrow_right" />
+
+        <ImageView
+            android:id="@+id/ivwarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/ivarrow"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:src="@drawable/ic_warning_red" />
+
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

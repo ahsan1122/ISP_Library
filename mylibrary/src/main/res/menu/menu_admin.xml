@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.esp.test.app.MainActivity"
+    >
+
+  <item
+      android:id="@+id/action_admin"
+      android:icon="@drawable/search_icon"
+      app:showAsAction="always|collapseActionView"
+      app:actionViewClass="androidx.appcompat.widget.SearchView"
+      android:title="@string/admin"/>
+
+</menu>

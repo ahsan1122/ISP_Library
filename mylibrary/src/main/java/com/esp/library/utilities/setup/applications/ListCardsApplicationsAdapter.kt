@@ -1,0 +1,311 @@
+package utilities.adapters.setup.applications
+
+import android.graphics.drawable.GradientDrawable
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.RelativeLayout
+import android.widget.TextView
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.esp.library.R
+import com.esp.library.exceedersesp.ESPApplication
+import com.esp.library.exceedersesp.controllers.applications.ApplicationDetailScreenActivity
+import com.esp.library.utilities.common.CustomLogs
+import com.esp.library.utilities.common.Shared
+import com.esp.library.exceedersesp.BaseActivity
+import com.esp.library.utilities.common.Enums
+import utilities.adapters.setup.applications.ListUsersApplicationsAdapter.Companion.isSubApplications
+import utilities.data.applicants.ApplicationSingleton
+import utilities.data.applicants.ApplicationsDAO
+import java.util.*
+
+class ListCardsApplicationsAdapter(private var mApplications: List<ApplicationsDAO>?, con: BaseActivity,
+                                   internal var searched_text: String?, subApplications: Boolean) :
+        androidx.recyclerview.widget.RecyclerView.Adapter<ListCardsApplicationsAdapter.ParentViewHolder>() {
+
+    private var context: BaseActivity? = null
+
+
+
+    open class ParentViewHolder(v: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(v)
+
+    inner class ActivitiesList(v: View) : ParentViewHolder(v) {
+
+        internal var cards: RelativeLayout
+        internal var rlcategory: RelativeLayout
+        internal var category: TextView
+        internal var definitionName: TextView
+        internal var rlpendingfor: RelativeLayout? = null
+        internal var startedOn: TextView
+        internal var startedOntext: TextView
+        internal var applicationNumber: TextView
+        internal var txtstatus: TextView
+        internal var categorytext: TextView
+        internal var pendingfor: TextView? = null
+        internal var llreason: RelativeLayout
+        internal var status_list: androidx.recyclerview.widget.RecyclerView
+        internal var voverduedot: View
+
+
+        init {
+
+            cards = itemView.findViewById(R.id.cards)
+            rlcategory = itemView.findViewById(R.id.rlcategory)
+            category = itemView.findViewById(R.id.category)
+            definitionName = itemView.findViewById(R.id.definitionName)
+            startedOn = itemView.findViewById(R.id.startedOn)
+            startedOntext = itemView.findViewById(R.id.startedOntext)
+            applicationNumber = itemView.findViewById(R.id.applicationNumber)
+            txtstatus = itemView.findViewById(R.id.txtstatus)
+            llreason = itemView.findViewById(R.id.llreason)
+            categorytext = itemView.findViewById(R.id.categorytext)
+            status_list = itemView.findViewById(R.id.status_list)
+            voverduedot = itemView.findViewById(R.id.voverduedot)
+            status_list.setHasFixedSize(true)
+            status_list.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            status_list.setItemAnimator(androidx.recyclerview.widget.DefaultItemAnimator())
+
+            try {
+                rlpendingfor = itemView.findViewById(R.id.rlpendingfor)
+                pendingfor = itemView.findViewById(R.id.pendingfor)
+            } catch (e: java.lang.Exception) {
+
+            }
+
+
+        }
+    }
+
+    init {
+        context = con
+        isSubApplications = subApplications
+
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ParentViewHolder {
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.list_card_applications_row, parent, false)
+        return ActivitiesList(v)
+    }
+
+
+    fun setSpots(mApplications: List<ApplicationsDAO>) {
+        this.mApplications = mApplications
+    }
+
+    fun getSpots(): List<ApplicationsDAO> {
+        return this.mApplications!!
+    }
+
+    override fun onBindViewHolder(holder_parent: ParentViewHolder, position: Int) {
+
+
+        val holder = holder_parent as ActivitiesList
+        val applicationsDAO = mApplications?.get(position)
+
+
+        val category = applicationsDAO?.category
+        val definitionName = applicationsDAO?.definitionName
+        val applicationNumber = applicationsDAO?.applicationNumber
+        var applicationName: String? = ""
+        applicationName = when (ESPApplication.getInstance()?.user?.loginResponse?.role?.toLowerCase(Locale.getDefault()).equals(Enums.applicant.toString(), ignoreCase = true)) {
+            true -> ESPApplication.getInstance()?.user?.loginResponse?.name
+            false -> applicationsDAO?.applicantName
+        }
+
+        /*       if (ESPApplication.getInstance()?.user?.loginResponse?.role?.toLowerCase() != context?.getString(R.string.applicantsmall)
+                       && applicationsDAO?.isOverDue!!)
+                   holder.voverduedot.visibility = View.VISIBLE*/
+
+        if (searched_text != null && searched_text!!.length > 0) {
+
+            holder.category.text = Shared.getInstance().getSearchedTextHighlight(searched_text, category,context)
+            holder.definitionName.text = Shared.getInstance().getSearchedTextHighlight(searched_text, definitionName,context)
+            holder.applicationNumber.text = Shared.getInstance().getSearchedTextHighlight(searched_text, applicationNumber,context)
+
+        } else {
+
+            if (isSubApplications) {
+                holder.categorytext.text = context?.getString(R.string.applicantcolon)
+                holder.category.text = applicationName
+                holder.definitionName.text = definitionName
+                holder.rlpendingfor?.visibility = View.VISIBLE
+            } else {
+                if (category.isNullOrEmpty())
+                    holder.rlcategory.visibility = View.GONE
+
+                holder.category.text = category
+                holder.definitionName.text = definitionName
+                holder.rlpendingfor?.visibility = View.GONE
+            }
+            holder.applicationNumber.text = applicationNumber
+        }
+
+
+        if (applicationsDAO?.statusId == 1) // if draft application hide submitted on
+        {
+            holder.startedOn.visibility = View.GONE
+            holder.startedOntext.visibility = View.GONE
+        }
+
+        var displayDate = "";
+
+        if (applicationsDAO?.submittedOn != null && applicationsDAO.submittedOn!!.length > 0) {
+            displayDate = Shared.getInstance().getDisplayDate(context, applicationsDAO.submittedOn, true)
+            holder.startedOn.text = displayDate
+        } else {
+            displayDate = Shared.getInstance().getDisplayDate(context, applicationsDAO?.createdOn, true)
+            holder.startedOn.text = displayDate
+        }
+
+
+        val days = Shared.getInstance().fromStringToDate(context, displayDate)
+
+
+        var daysVal = context?.getString(R.string.day)
+        if (days > 1)
+            daysVal = context?.getString(R.string.days)
+
+        holder.pendingfor?.setText(days.toString() + " " + daysVal)
+
+
+
+        if (applicationsDAO != null) {
+            setStatusColor(holder, applicationsDAO)
+        }
+
+
+
+        holder.cards.setOnClickListener {
+
+            holder.cards.isEnabled=false
+            if (ESPApplication.getInstance()?.user?.profileStatus == null || ESPApplication.getInstance()?.user?.profileStatus == context?.getString(R.string.profile_complete)) {
+                if (applicationsDAO != null) {
+                    appDetail(applicationsDAO, false)
+                }
+            } else if (ESPApplication.getInstance()?.user?.profileStatus == context?.getString(R.string.profile_incomplete)) {
+                Shared.getInstance().showAlertProfileMessage(context?.getString(R.string.profile_error_heading), context?.getString(R.string.profile_error_desc), context)
+
+            } else if (ESPApplication.getInstance()?.user?.profileStatus == context?.getString(R.string.profile_incomplete_admin)) {
+                Shared.getInstance().showAlertProfileMessage(context?.getString(R.string.profile_error_heading), context?.getString(R.string.profile_error_desc_admin), context)
+            }
+        }
+
+        val statusAdapter = ApplicationStatusAdapter(applicationsDAO?.stageStatuses, context!!);
+        holder.status_list.adapter = statusAdapter
+
+
+
+    }//End Holder Class
+
+
+
+
+
+    private fun setStatusColor(holder: ActivitiesList, applicationsDAO: ApplicationsDAO) {
+        val getStatusId = applicationsDAO.statusId
+        holder.txtstatus.setBackgroundResource(R.drawable.status_background)
+        val drawable = holder.txtstatus.getBackground() as GradientDrawable
+        when (getStatusId) {
+            0 // Invited
+            -> {
+
+                holder.txtstatus.setText(R.string.invited)
+                holder.txtstatus.setTextColor(ContextCompat.getColor(context!!, R.color.status_invited))
+                drawable.setColor(ContextCompat.getColor(context!!, R.color.status_invited_background))
+
+            }
+            1 // New as draft
+            -> {
+
+                holder.txtstatus.setText(R.string.draftcaps)
+                holder.txtstatus.setTextColor(ContextCompat.getColor(context!!, R.color.status_draft))
+                drawable.setColor(ContextCompat.getColor(context!!, R.color.status_draft_background))
+
+            }
+            2 // Pending
+            -> {
+                holder.txtstatus.setText(R.string.inprogress)
+                holder.txtstatus.setTextColor(ContextCompat.getColor(context!!, R.color.status_pending))
+                drawable.setColor(ContextCompat.getColor(context!!, R.color.status_pending_background))
+
+            }
+            3 // Accepted
+            -> {
+
+                holder.txtstatus.setText(R.string.accepted)
+                holder.txtstatus.setTextColor(ContextCompat.getColor(context!!, R.color.status_accepted))
+                drawable.setColor(ContextCompat.getColor(context!!, R.color.status_accepted_background))
+
+            }
+            4  // Rejected
+            -> {
+                holder.txtstatus.setText(R.string.rejected)
+                holder.txtstatus.setTextColor(ContextCompat.getColor(context!!, R.color.status_rejected))
+                drawable.setColor(ContextCompat.getColor(context!!, R.color.status_rejected_background))
+
+            }
+            5  // Cancelled
+            -> {
+                holder.txtstatus.setText(R.string.cancelled)
+                holder.txtstatus.setTextColor(ContextCompat.getColor(context!!, R.color.status_draft))
+                drawable.setColor(ContextCompat.getColor(context!!, R.color.status_draft_background))
+
+            }
+            else -> {
+                holder.txtstatus.setText(R.string.inprogress)
+                holder.txtstatus.setTextColor(ContextCompat.getColor(context!!, R.color.status_pending))
+                drawable.setColor(ContextCompat.getColor(context!!, R.color.status_pending_background))
+
+            }
+        }
+    }
+
+    private fun appDetail(applicationsDAO: ApplicationsDAO, isResubmit: Boolean) {
+        CustomLogs.displayLogs(LOG_TAG + " mApplications.getStatus(): " + applicationsDAO.status!!.toLowerCase())
+
+        val status = applicationsDAO.status!!.toLowerCase(Locale.getDefault())
+        val statusId = applicationsDAO.statusId
+
+
+        if (ESPApplication.getInstance()?.user?.loginResponse?.role?.toLowerCase(Locale.getDefault()).equals(Enums.applicant.toString(), ignoreCase = true)
+                || isSubApplications) {
+            val bundle = Bundle()
+            bundle.putSerializable(ApplicationsDAO.BUNDLE_KEY, applicationsDAO)
+            bundle.putString("appStatus", status)
+            bundle.putInt("statusId", statusId)
+            bundle.putBoolean("isResubmit", isResubmit)
+            bundle.putBoolean("isSubApplications", isSubApplications)
+            Shared.getInstance().callIntentWithResult(ApplicationDetailScreenActivity::class.java, context, bundle, 2)
+        } else {
+
+            if (ApplicationSingleton.instace.application != null) {
+                ApplicationSingleton.instace.application = null
+            }
+            val bundle = Bundle()
+            bundle.putSerializable(ApplicationsDAO.BUNDLE_KEY, applicationsDAO)
+            bundle.putString("appStatus", status)
+            bundle.putInt("statusId", statusId)
+            bundle.putBoolean("isComingfromAssessor", true)
+            Shared.getInstance().callIntentWithResult(ApplicationDetailScreenActivity::class.java, context, bundle, 2)
+        }
+    }
+
+    override fun getItemCount(): Int {
+        return mApplications?.size ?: 0
+    }
+
+
+    override fun getItemViewType(position: Int): Int {
+        return position
+    }
+
+
+
+    companion object {
+
+        private val LOG_TAG = "ListCardsApplicationsAdapter"
+
+    }
+}

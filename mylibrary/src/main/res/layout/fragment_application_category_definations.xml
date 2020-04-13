@@ -1,0 +1,211 @@
+<LinearLayout xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_grey"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/no_application_available_div"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center"
+        android:background="@color/white"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_no_application"
+                />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/message_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:layout_marginTop="@dimen/margin_40dp"
+                android:gravity="center"
+                android:textSize="@dimen/text_16"
+                custom:customfont="regular"
+                />
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/message_error_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_grey"
+                android:layout_below="@+id/card_error_text"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:gravity="center"
+                android:textSize="@dimen/text_12"
+                custom:customfont="regular"
+                android:layout_marginStart="@dimen/margin_30dp"
+                android:layout_marginEnd="@dimen/margin_30dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical"
+        shimmer:duration="500">
+
+        <!-- Adding 7 rows of placeholders -->
+        <LinearLayout
+            android:id="@+id/shimmerlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/add_definition_list_placeholder_layout" />
+            <include layout="@layout/add_definition_list_placeholder_layout" />
+            <include layout="@layout/add_definition_list_placeholder_layout" />
+            <include layout="@layout/add_definition_list_placeholder_layout" />
+            <include layout="@layout/add_definition_list_placeholder_layout" />
+            <include layout="@layout/add_definition_list_placeholder_layout" />
+            <include layout="@layout/add_definition_list_placeholder_layout" />
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_below="@+id/listcount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/nestedscrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            android:src="@drawable/draw_toolbar"></ImageView>
+
+
+    <RelativeLayout
+        android:id="@+id/searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:layout_below="@+id/curve_toolbar">
+
+
+        <com.esp.library.utilities.customcontrols.BodyEditText
+            android:id="@+id/etxtsearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/ivfilter"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawableStart="@drawable/search_icon"
+            android:drawablePadding="@dimen/_5sdp"
+            android:hint="@string/search_"
+            android:maxLines="1"
+            android:inputType="text"
+            android:drawableTint="@color/cooltwogrey"
+            android:background="@drawable/draw_bg_grey"
+            android:padding="@dimen/_7sdp"
+            android:imeOptions="actionDone"
+            android:textSize="@dimen/_11ssp"
+            android:theme="@style/AddApplicationEditTextField"
+            custom:customfont="regular" />
+
+        <ImageView
+            android:id="@+id/ivfilter"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="?attr/selectableItemBackground"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/filter" />
+
+
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:clipToPadding="false"
+        android:id="@+id/filter_horizontal_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:visibility="gone"
+        android:animationCache="true"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/application_list_div"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/listcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cooltwogrey"
+            android:layout_margin="@dimen/_7sdp"
+            android:textSize="@dimen/_11ssp"
+            custom:customfont="regular"
+            />
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/defination_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/listcount"
+                android:animationCache="true"
+                android:clipToPadding="false"
+                android:keepScreenOn="true"
+                android:visibility="visible"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>
+

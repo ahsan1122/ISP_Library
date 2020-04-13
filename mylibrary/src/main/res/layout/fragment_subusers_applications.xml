@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_bg"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/curvetoolbar"
+        layout="@layout/curve_toolbar"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/no_subapplication_available_div"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_no_application" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/ttxnorecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_error_text"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:text="@string/norecord"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_20ssp"
+                custom:customfont="regular" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            android:src="@drawable/draw_toolbar"></ImageView>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/application_list_div"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/view_bg">
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/txtrequests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mid_grey"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            custom:customfont="regular"
+
+            />
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerview_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/txtrequests"
+            android:visibility="gone"
+            android:orientation="vertical"
+            shimmer:duration="500">
+
+            <!-- Adding 5 rows of placeholders -->
+            <LinearLayout
+                android:id="@+id/shimmerlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/definition_list_placeholder_layout" />
+                <include layout="@layout/definition_list_placeholder_layout" />
+                <include layout="@layout/definition_list_placeholder_layout" />
+                <include layout="@layout/definition_list_placeholder_layout" />
+                <include layout="@layout/definition_list_placeholder_layout" />
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/app_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txtrequests"
+                android:animationCache="true"
+                android:clipToPadding="false">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        <RelativeLayout
+            android:id="@+id/load_more_div"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/green"
+            android:gravity="center"
+            android:padding="@dimen/margin_5dp"
+            android:visibility="gone"
+
+            >
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loadingmore"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14"
+                custom:customfont="regular"
+
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/_15sdp"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFieldDisableLabel"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:background="@drawable/draw_bg_disable_fields_with_stroke"
+        android:visibility="gone"
+        app:hintTextAppearance="@style/AddApplicationTextLabel">
+
+        <com.esp.library.utilities.customcontrols.BodyEditText
+            android:id="@+id/etvalueDisable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:paddingTop="@dimen/_6sdp"
+            android:autoLink="web"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:theme="@style/AddApplicationEditTextField"
+            custom:customfont="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/llmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="@style/MyRoundProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/margin_5dp"
+        android:indeterminate="true"
+        android:visibility="gone" />
+    <RelativeLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFieldLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:hintTextAppearance="@style/AddApplicationTextLabel">
+
+            <com.esp.library.utilities.customcontrols.BodyEditText
+                android:id="@+id/etValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:enabled="false"
+                android:focusable="false"
+                custom:customfont="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                android:theme="@style/AddApplicationEditTextField" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnClickArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@android:color/transparent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ivclear"
+            android:layout_width="@dimen/_11sdp"
+            android:layout_height="@dimen/_11sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_21sdp"
+            android:visibility="gone"
+            android:background="@drawable/ic_cross"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+    </LinearLayout>
+    <include
+        android:id="@+id/onlyviewlayout"
+        android:visibility="gone"
+        layout="@layout/item_add_application_field_type_text_view"/>
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/pale_grey"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_3sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:cardUseCompatPadding="true">
+
+
+
+        <RelativeLayout
+            android:id="@+id/llparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_15sdp"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:id="@+id/btnClickable"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:orientation="vertical"
+                android:background="?attr/selectableItemBackground"/>
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="dsadsadasd"
+                    android:textSize="@dimen/_17ssp"
+                    custom:customfont="heavy" />
+
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:ellipsize="end"
+                    android:layout_below="@+id/name"
+                    android:text="dsadsadasd"
+                    android:maxLines="3"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    custom:customfont="regular" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rlparentapplication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/description"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+
+                    <com.esp.library.utilities.customcontrols.BodyText
+                        android:id="@+id/txtparentnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:text="@string/parentapplication"
+                        android:maxLines="3"
+                        android:textColor="@color/coolgrey"
+                        android:textSize="@dimen/_13ssp"
+                        custom:customfont="regular" />
+
+
+                    <com.esp.library.utilities.customcontrols.BodyText
+                        android:id="@+id/txtparentnumvalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/txtparentnum"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="dsadsadasd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13ssp"
+                        custom:customfont="regular" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlparentapplication"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+
+                    <com.esp.library.utilities.customcontrols.BodyText
+                        android:id="@+id/txtrequestedby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:text="@string/requestedby"
+                        android:maxLines="3"
+                        android:textColor="@color/coolgrey"
+                        android:textSize="@dimen/_13ssp"
+                        custom:customfont="regular" />
+
+
+                    <com.esp.library.utilities.customcontrols.BodyText
+                        android:id="@+id/txtrequestedbyvalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/txtrequestedby"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:ellipsize="end"
+                        android:text="dsadsadasd"
+                        android:maxLines="3"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13ssp"
+                        custom:customfont="regular" />
+
+                </RelativeLayout>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

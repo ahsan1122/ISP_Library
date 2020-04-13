@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/txtline"
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="match_parent"
+            android:background="@color/green" />
+
+        <RelativeLayout
+            android:id="@+id/lldetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_5sdp"
+            android:background="@drawable/draw_bg_white_grey_stroke"
+            android:layout_marginStart="@dimen/_5sdp">
+
+            <RelativeLayout
+                android:id="@+id/rlcriteria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/txtcrierianame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:text="@string/criteria"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17ssp"
+                custom:customfont="heavy" />
+
+
+                <ImageButton
+                    android:id="@+id/ibReassignCard"
+                    style="?actionButtonStyle"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_dots"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlduration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_below="@+id/rlcriteria">
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/durationtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/durationcolon"
+                android:paddingStart="@dimen/_10sdp"
+                android:textColor="@color/coolgrey"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/durationtextvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_toEndOf="@+id/durationtext"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/durationcolon"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlowner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_below="@+id/rlduration">
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/ownertext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ownercolon"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:textColor="@color/coolgrey"
+                    android:textSize="@dimen/_13ssp"
+                    custom:customfont="regular" />
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/ownertextvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/_210sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/ownertext"
+                    android:text="@string/ownercolon"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    custom:customfont="regular" />
+
+                <ImageButton
+                    android:id="@+id/add_criteria_comments"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_toStartOf="@+id/txtstatus"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_card_commented"
+                    />
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/txtstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:textSize="@dimen/_13ssp"
+                    custom:customfont="regular" />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/rlmoreinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlowner">
+
+
+                <View
+                    android:id="@+id/pendinglineview"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:background="@color/very_light_grey_dim"/>
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/txtmoreinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:text="@string/moreinformation"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/_13ssp"
+                    custom:customfont="semibold" />
+
+
+                <ImageView
+                    android:id="@+id/ivainforrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toEndOf="@id/txtmoreinfo"
+                    android:tint="@color/green"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:src="@drawable/ic_more_info_down">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlmoreinfo"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:animationCache="true"
+                android:clipToPadding="false"
+                android:keepScreenOn="true"/>
+
+            <LinearLayout
+                android:id="@+id/rlacceptapprove"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/rvFields">
+
+                <com.esp.library.utilities.customcontrols.CustomButton
+                    android:id="@+id/btreject"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:text="@string/reject"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:textColor="@color/green"
+                    android:background="@drawable/draw_bg_green_stroke"
+                    android:textSize="@dimen/_14ssp"
+                    custom:customfont="bold" />
+
+                <com.esp.library.utilities.customcontrols.CustomButton
+                    android:id="@+id/btapprove"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:text="@string/approve"
+                    android:layout_weight="1"
+                    android:layout_toEndOf="@+id/btreject"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:background="@drawable/draw_bg_green"
+                    android:textSize="@dimen/_13ssp"
+                    custom:customfont="bold" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

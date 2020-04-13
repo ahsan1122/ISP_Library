@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bgcolor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/txtheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/linkdefinition"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            custom:customfont="heavy" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/very_light_grey" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/definitionnametext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/definition_name"
+                android:textColor="@color/light_grey"
+                android:textSize="@dimen/_12ssp"
+                custom:customfont="regular" />
+
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/definitionnameval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/definitionnametext"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                custom:customfont="regular" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/submittedtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submitted"
+                    android:textColor="@color/light_grey"
+                    android:textSize="@dimen/_12ssp"
+                    custom:customfont="regular" />
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/submittedval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toEndOf="@+id/submittedtext"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    custom:customfont="regular" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/acceptedtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/accepted"
+                    android:textColor="@color/light_grey"
+                    android:textSize="@dimen/_12ssp"
+                    custom:customfont="regular" />
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/accepted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toEndOf="@+id/acceptedtext"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    custom:customfont="regular" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/rejectedtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rejected"
+                    android:textColor="@color/light_grey"
+                    android:textSize="@dimen/_12ssp"
+                    custom:customfont="regular" />
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/rejected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toEndOf="@+id/rejectedtext"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    custom:customfont="regular" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/submissionallowedtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stopsubmission"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    custom:customfont="regular" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchsubmissionallow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/SCBSwitch"
+                    android:layout_alignParentEnd="true" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/very_light_grey" />
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

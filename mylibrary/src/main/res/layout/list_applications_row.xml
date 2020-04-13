@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/white" />
+
+            <View
+                android:id="@+id/voverduedot"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/draw_orange"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_minus2sdp"
+                android:background="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_15sdp">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/ibRemoveCard"
+                            style="?actionButtonStyle"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentEnd="true"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/ic_dots"
+                            android:visibility="gone" />
+
+                        <com.esp.library.utilities.customcontrols.BodyText
+                            android:id="@+id/definitionName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:layout_toStartOf="@+id/ibRemoveCard"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_17ssp"
+                            custom:customfont="heavy" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlcategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.esp.library.utilities.customcontrols.BodyText
+                            android:id="@+id/categorytext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/categorycolon"
+                            android:textColor="@color/coolgrey"
+                            android:textSize="@dimen/_13ssp"
+                            custom:customfont="regular" />
+
+                        <com.esp.library.utilities.customcontrols.BodyText
+                            android:id="@+id/category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_toEndOf="@+id/categorytext"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp"
+                            custom:customfont="regular" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlrequestNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp">
+
+                        <com.esp.library.utilities.customcontrols.BodyText
+                            android:id="@+id/applicationNumbertext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/requestnumber"
+                            android:textColor="@color/coolgrey"
+                            android:textSize="@dimen/_13ssp"
+                            custom:customfont="regular" />
+
+                        <com.esp.library.utilities.customcontrols.BodyText
+                            android:id="@+id/applicationNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_toEndOf="@+id/applicationNumbertext"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp"
+                            custom:customfont="regular" />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/llsubmitteddate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.esp.library.utilities.customcontrols.BodyText
+                            android:id="@+id/startedOntext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:text="@string/submittedoncolon"
+                            android:textColor="@color/coolgrey"
+                            android:textSize="@dimen/_13ssp"
+                            custom:customfont="regular" />
+
+                        <com.esp.library.utilities.customcontrols.BodyText
+                            android:id="@+id/startedOn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_toEndOf="@+id/startedOntext"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp"
+                            custom:customfont="regular" />
+
+
+
+                    </RelativeLayout>
+
+
+                    <com.esp.library.utilities.customcontrols.BodyText
+                        android:id="@+id/txtstatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_6sdp"
+                        android:textSize="@dimen/_13ssp"
+                        custom:customfont="regular" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlreason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_3sdp">
+
+                    <com.esp.library.utilities.customcontrols.BodyText
+                        android:id="@+id/reasontext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reasonfordecline"
+                        android:textColor="@color/coolgrey"
+                        android:textSize="@dimen/_13ssp"
+                        custom:customfont="regular" />
+
+
+                        <com.esp.library.utilities.customcontrols.BodyText
+                            android:id="@+id/reasontextvalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/reasonfordecline"
+                            android:layout_toEndOf="@+id/reasontext"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp"
+                            custom:customfont="regular" />
+
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/status_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_marginBottom="@dimen/_minus2sdp"
+                        android:animationCache="true"
+                        android:clipToPadding="false" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

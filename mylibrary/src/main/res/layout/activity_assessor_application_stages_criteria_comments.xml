@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_width="match_parent"
+            android:background="@drawable/toolbar_curver"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                >
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/definitionName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_14ssp"
+                    custom:customfont="heavy"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10ssp"
+                    custom:customfont="regular"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/add_comments_view"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/very_light_grey"
+        ></RelativeLayout>
+    <FrameLayout
+        android:id="@+id/request_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+    </FrameLayout>
+
+</LinearLayout>

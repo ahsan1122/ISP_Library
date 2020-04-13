@@ -1,0 +1,176 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/viewsectionbottom"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@color/silver"
+            android:visibility="gone" />
+
+
+        <View
+            android:id="@+id/vsperatorTop"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/whiteThree"/>
+
+        <RelativeLayout
+            android:id="@+id/rlsection"
+            android:paddingStart="@dimen/_13sdp"
+            android:paddingEnd="@dimen/_13sdp"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/tvSectionHeaderCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/_5sdp"
+                android:text="1"
+                android:textAllCaps="true"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_15ssp"
+                custom:customfont="heavy" />
+
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/tvSectionHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/tvSectionHeaderCount"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:text="@string/defaultt"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                custom:customfont="heavy" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/tvSectionLabelsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/ibshowoptions"
+                android:layout_below="@+id/tvSectionHeader"
+                android:layout_toEndOf="@+id/tvSectionHeaderCount"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/coolgrey"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+
+
+            <ImageButton
+                android:id="@+id/ivarrow"
+                style="?actionButtonStyle"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:tint="@color/grey"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_arrow_up"/>
+
+
+
+
+            <ImageButton
+                android:id="@+id/ibshowoptions"
+                style="?actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_dots"/>
+
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFieldsCards"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/_13sdp"
+            android:paddingEnd="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:animationCache="true"
+            android:clipToPadding="false"
+            android:keepScreenOn="true"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rladdnewsection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:paddingStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_gravity="start">
+
+        <ImageView
+            android:id="@+id/ivadd"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_navbar_add_green"/>
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/txtaddsectionbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addperiod"
+            android:layout_toEndOf="@+id/ivadd"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textAllCaps="false"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_14ssp"
+            custom:customfont="regular" />
+
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/vbottomSeperator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/whiteThree"/>
+
+
+
+</LinearLayout>

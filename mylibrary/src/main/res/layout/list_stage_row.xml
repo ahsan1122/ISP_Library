@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:background="@color/pale_grey"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llstagesrow"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:paddingTop="@dimen/_7sdp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtline"
+            android:layout_width="@dimen/_3sdp"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:background="@color/green" />
+
+
+
+    <LinearLayout
+        android:id="@+id/lldetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <com.esp.library.utilities.customcontrols.BodyText
+            android:id="@+id/txtStagename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stages"
+            android:maxWidth="@dimen/_210sdp"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_17ssp"
+            custom:customfont="heavy" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/txtstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:maxWidth="@dimen/_80sdp"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+
+
+            <ImageView
+                android:id="@+id/ivarrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_down"
+                android:visibility="gone"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlaccepreject"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_height="wrap_content">
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/acceptedontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/acceptedon"
+                android:layout_centerVertical="true"
+                android:textColor="@color/coolgrey"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/acceptedonvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_toEndOf="@+id/acceptedontext"
+                android:layout_centerVertical="true"
+                android:text="@string/acceptedon"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_2sdp">
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/sequencetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sequence"
+                android:textColor="@color/coolgrey"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/sequencetextvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_toEndOf="@+id/sequencetext"
+                android:text="@string/sequence"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlacceptencecriteria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_2sdp">
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/acceptencetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/acceptcriteria"
+                android:textColor="@color/coolgrey"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+
+            <com.esp.library.utilities.customcontrols.BodyText
+                android:id="@+id/acceptencetextvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_toEndOf="@+id/acceptencetext"
+                android:text="@string/acceptcriteria"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                custom:customfont="regular" />
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvExpandCrietrias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:animationCache="true"
+            android:clipToPadding="false"
+            android:keepScreenOn="true" />
+
+    </LinearLayout>
+
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCrietrias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:animationCache="true"
+        android:clipToPadding="false"
+        android:keepScreenOn="true" />
+
+
+</LinearLayout>

@@ -1,0 +1,356 @@
+<resources>
+    <string name="app_name">ISP</string>
+
+
+    <!--<string name="base_url">http://qaesp.azurewebsites.net/webapi/</string>-->
+
+    <string name="light" translatable="false">light</string>
+    <string name="regular" translatable="false">regular</string>
+    <string name="bold" translatable="false">bold</string>
+    <string name="semibold" translatable="false">semibold</string>
+    <string name="heavy" translatable="false">heavy</string>
+    <string name="flaticon" translatable="false">flaticon.ttf</string>
+
+    <string name="font_medium" translatable="false">lato/lato_medium.ttf</string>
+    <string name="font_regular" translatable="false">lato/lato_regular.ttf</string>
+    <string name="font_bold" translatable="false">lato/lato_bold.ttf</string>
+    <string name="font_heavy" translatable="false">lato/lato_heavy.ttf</string>
+    <string name="font_semibold" translatable="false">lato/lato_semibold.ttf</string>
+
+
+    <string name="font_light_dubai" translatable="false">dubai/dubai_medium.ttf</string>
+    <string name="font_regular_dubai" translatable="false">dubai/dubai_regular.ttf</string>
+    <string name="font_bold_dubai" translatable="false">dubai/dubai_bold.ttf</string>
+
+
+    <string name="sign_in">Sign In</string>
+    <string name="logineithidenedi">Login with IDENEDI</string>
+    <string name="login_email_label">Email</string>
+    <string name="login_valid_email_error">Please enter a valid email</string>
+    <string name="login_email_error">Please enter email</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_valid_password_error">Please enter password</string>
+    <string name="length_password_error">Password must contain minimum 6 characters</string>
+    <string name="internet_error_heading">No internet</string>
+    <string name="internet_connection_error">No internet connectivity, please check your internet connection and try again</string>
+    <string name="login_label">Login</string>
+    <string name="choose_organization">Please select account from below</string>
+    <string name="some_thing_went_wrong">Something went wrong, please try again </string>
+    <string name="norecordstofilter">No records to filter</string>
+    <string name="notacceptrequest">We are currently not accepting applications for </string>
+    <string name="contactadministrator">Please try again later or contact your system administrator for more details.</string>
+    <string name="closingdatepassed">The closing date for accepting applications has passed</string>
+    <string name="login_error">Incorrect Login ID or Password!</string>
+    <string name="login_error_account_locked">Your account is locked.</string>
+    <string name="login_error_remaining3">Invalid credentials. You have 3 more attempts before your account gets locked out.</string>
+    <string name="login_error_remaining2">Invalid credentials. You have 2 more attempts before your account gets locked out.</string>
+    <string name="login_error_remaining1">Invalid credentials. You have 1 more attempt before your account gets locked out.</string>
+    <string name="login_error_locked">Invalid credentials. Your account has been locked out for 30 minutes due to multiple failed login attempts</string>
+    <string name="applicant_error">You are not an Applicant.</string>
+    <string name="welcome">Welcome</string>
+    <string name="navigation_drawer_open">Open filter</string>
+    <string name="navigation_drawer_close">Close filter</string>
+    <string name="no">No</string>
+    <string name="added">Added</string>
+    <string name="startsubmittingapp">Start by submitting your first </string>
+    <string name="itseasy">. Its easy and take less than 2 minutes, we promise!</string>
+    <string name="my">My</string>
+    <string name="my_space">My Space</string>
+    <string name="search_">Search</string>
+
+    <string name="profile_error_heading">Incomplete Profile</string>
+    <string name="profile_error_desc">Uh-oh, you can\'t submit request until you fill your profile!</string>
+    <string name="profile_error_desc_admin">Uh-oh, you can\'t submit request, Please contact admin!</string>
+    <string name="profile_error_cancel">CANCEL</string>
+    <string name="profile_complete" translatable="false">COMPLETE</string>
+    <string name="profile_incomplete" translatable="false">IN-COMPLETE</string>
+    <string name="profile_incomplete_admin" translatable="false">IN-COMPLETE-BY-ADMIN</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="request_reject_error">This request has been rejected incorrect ticket. Please submit a new request with the correct information.</string>
+    <string name="submitted_on">Submitted on</string>
+    <string name="request">Request </string>
+    <string name="newversionavailable">New Version Available</string>
+    <string name="updatenow">Update now</string>
+    <string name="newversionavailabletext">A new version of this app is available in the Play Store, Please download new version of this App.</string>
+    <string name="requestedby">Requested by:</string>
+    <string name="requests">Requests</string>
+    <string name="by_status">By Status</string>
+    <string name="by_definition">By Definitions</string>
+    <string name="sortby">Sort By</string>
+    <string name="filters">Filters</string>
+    <string name="closed">Closed</string>
+    <string name="closedsmall">closed</string>
+    <string name="filter">Filter</string>
+    <string name="parentapplication">Parent Application:</string>
+    <string name="filter_error">Please select atleast one status filter to proceed</string>
+    <string name="definition_filter_error">Please select atleast one definition filter to proceed</string>
+    <string name="reset">Reset</string>
+    <string name="invited">Invited</string>
+    <string name="attachfile">Attach File</string>
+    <string name="new_satus">New</string>
+    <string name="under_satus">Pending</string>
+    <string name="approved">Approved</string>
+    <string name="rejected">Rejected</string>
+    <string name="rejected_enum" translatable="false">4</string>
+    <string name="addcommenttoproceed">Please add comment to proceed</string>
+    <string name="enterprise_submission_platform">Enterprise Submission Platform</string>
+    <string name="invoice_submission_platform">Invoice Submission Platform</string>
+    <string name="app_version" translatable="false">0.3.1</string>
+    <string name="no_cat_error">No Category found!</string>
+
+    <string name="no_defination_error">No Definition found!</string>
+    <string name="add">Add</string>
+    <string name="category">Category</string>
+    <string name="categories">Categories</string>
+    <string name="categorysmall">category</string>
+    <string name="yes">Yes</string>
+
+
+
+    <string name="empty_directory">Empty Directory</string>
+    <string name="storage_removed">Storage was removed or unmounted.</string>
+    <string name="choose_file">Select a file</string>
+    <string name="error_selecting_file">Error selecting File</string>
+    <string name="internal_storage">Internal storage</string>
+
+    <string name="save_draft">Save Draft</string>
+    <string name="your">Your</string>
+    <string name="wasnotsubmitted">was not submitted yet.</string>
+    <string name="save_draft_ok">SAVE AS DRAFT</string>
+    <string name="discard">Discard</string>
+    <string name="assessor">Assessor</string>
+    <string name="applicant">Applicant</string>
+    <string name="applicants">Applicants</string>
+    <string name="applications">Applications</string>
+    <string name="application">Application</string>
+    <string name="applicantcolon">Applicant:</string>
+    <string name="applicantsmall">applicant</string>
+    <string name="yesdelete">Yes, Delete</string>
+    <string name="expired">Authorization has been denied for this request.</string>
+    <string name="criterias">Criterias</string>
+    <string name="criteria">Criteria</string>
+    <string name="durationcolon">Duration:</string>
+    <string name="ownercolon">Owner:</string>
+    <string name="criteria_feedback">Criteria Feedback</string>
+    <string name="pending">Pending</string>
+    <string name="inprogress">In Progress</string>
+    <string name="current">Current</string>
+    <string name="accepted">Accepted</string>
+    <string name="accepted_enum" translatable="false">3</string>
+    <string name="acceptedsmall">accepted</string>
+    <string name="logintolink">Login to link</string>
+    <string name="idenedinotlinkedtext">Your IDENEDI account is not linked with ISP. To link your IDENEDI account with ISP please login below with ISP \'Exceeders\' credentials or contact administration.</string>
+    <string name="please_add_comment">Please add comment</string>
+    <string name="resubmitapp">Do you want to resubmit</string>
+    <string name="data_available">data available!</string>
+    <string name="edit_comments">Edit Comment</string>
+    <string name="save">Save</string>
+    <string name="resubmit">Resubmit</string>
+    <string name="resubmitapplication">Resubmit Application</string>
+    <string name="addcomment">Add comment</string>
+    <string name="areyousure">Are you sure you want to delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="cancelled_enum" translatable="false">5</string>
+    <string name="reject_comments_hints_one_comment">Please provide at least one comment for the</string>
+    <string name="beforereject">before reject the</string>
+    <string name="reject_title">Are you sure you want to reject this criteria?</string>
+    <string name="accept_title">Are you sure you want to accept this criteria?</string>
+    <string name="add_comment">Add Comment</string>
+    <string name="yourcomment">Your comment</string>
+    <string name="edit_comment">Edit Comment</string>
+    <string name="post_comment">Post Comment</string>
+    <string name="edit_feedback">Edit feedback</string>
+    <string name="edit">Edit</string>
+    <string name="no_criteria_feedback_comments">There is no criteria feedback yet.</string>
+
+
+    <string name="action_menu_remove">Remove</string>
+    <string name="label_currency">currency</string>
+    <string name="savedraft">Save draft</string>
+    <string name="hidden">hidden</string>
+    <string name="shown">shown</string>
+    <string name="all">All</string>
+    <string name="all_enum" translatable="false">0</string>
+    <string name="member">Member</string>
+    <string name="allwithfeedback" translatable="false">ALLWITHFEEDBACK</string>
+    <string name="alert">alert</string>
+    <string name="ok">Ok</string>
+    <string name="submitrequest">Submit Request</string>
+    <string name="submit">Submit</string>
+    <string name="addperiod">Add Period</string>
+    <string name="nolookuphere">No lookup here!</string>
+    <string name="nofeedbackavailable">No feedback available!</string>
+    <string name="nocomments">No Comments!</string>
+    <string name="condition">Condition:</string>
+    <string name="acceptedon">Accepted on:</string>
+    <string name="rejectedon">Rejected on:</string>
+    <string name="sequence">Sequence:</string>
+    <string name="nocriteriaavailable">no action available!</string>
+    <string name="acceptcriteria">Acceptance Criteria:</string>
+    <string name="nostageavaialable">No stage available!</string>
+    <string name="enterurl">Enter URL</string>
+    <string name="welcometoesp">Welcome to ISP</string>
+    <string name="language">Language:</string>
+    <string name="enteremailandpassword">Please enter email and password to login</string>
+    <string name="email">Email</string>
+    <string name="emailcolon">Email:</string>
+    <string name="profiletype">Profile type</string>
+    <string name="password">Password</string>
+    <string name="forgotpassword">Forgot password?</string>
+    <string name="signout">Signout</string>
+    <string name="or">Or</string>
+    <string name="loadingmore">Loading more..</string>
+    <string name="loading">Loading...</string>
+    <string name="zerorecordfound">0 record found</string>
+    <string name="admin">Admin</string>
+    <string name="user">User</string>
+    <string name="adminsmall">admin</string>
+    <string name="accept">Accept</string>
+    <string name="actioncenter">Action center</string>
+    <string name="approve">Approve</string>
+    <string name="clearfilter">Clear Filter</string>
+    <string name="applyfilter">Apply Filter</string>
+    <string name="reject">Reject</string>
+    <string name="pleasewait">Please wait...</string>
+    <string name="defaultt">Default</string>
+    <string name="submittedon">Submitted on</string>
+    <string name="any">Any</string>
+    <string name="day">Day</string>
+    <string name="days">Days</string>
+    <string name="found">found</string>
+    <string name="definition">definition</string>
+    <string name="definitions">definitions</string>
+    <string name="selectafile">Select a file</string>
+    <string name="pleasetryagain">Please try again</string>
+    <string name="sizeshouldbelessthen">Size should be less then</string>
+    <string name="mb">MB</string>
+    <string name="error">Error</string>
+    <string name="draft">draft</string>
+    <string name="draftcaps">Draft</string>
+    <string name="profile">Profile</string>
+    <string name="submissionrequest">Submission Requests</string>
+    <string name="version">Version: </string>
+    <string name="neww">new</string>
+    <string name="rejectedsmall">rejected</string>
+    <string name="successfailed">Success failed</string>
+    <string name="pendingsmall">pending</string>
+    <string name="valuebetween">Value must be between</string>
+    <string name="and">and</string>
+    <string name="value">Value</string>
+    <string name="characters">characters</string>
+    <string name="valuegreater">Value must be greater or equal to </string>
+    <string name="valueless">Value must be less or equal to</string>
+    <string name="invalidemail">Email is invalid</string>
+    <string name="invalidlink">Please enter valid Link</string>
+    <string name="invalidnumber">Please enter valid Number</string>
+    <string name="valuegreaterequalto">Value must be greater or equal to</string>
+    <string name="valuelessequalto">Value must be less or equal to</string>
+    <string name="currency">Currency</string>
+    <string name="appnotavailable">Open this file, Application is not available</string>
+    <string name="choose">Choose</string>
+    <string name="stages">STAGES</string>
+    <string name="feedback">Feedback</string>
+    <string name="feedbackdetail">You will have the ability to leave a feedback when the request will be closed.</string>
+    <string name="acceptcriteri">ACCEPT CRITERIA</string>
+    <string name="rejectcriteria">REJECT CRITERIA</string>
+    <string name="gender">gender</string>
+    <string name="active">active</string>
+    <string name="activecaps">Active</string>
+    <string name="reassigned">ReAssigned</string>
+    <string name="completed">completed</string>
+    <string name="complete">complete</string>
+    <string name="completedcaps">Completed</string>
+    <string name="locked">locked</string>
+    <string name="link">link</string>
+    <string name="open">open</string>
+    <string name="opencaps">Open</string>
+    <string name="errorcreatingnewfile">Error creating new file</string>
+    <string name="thumbnail">thumbnail</string>
+    <string name="errorwritingthumbnail">Error writing thumbnail</string>
+    <string name="errorclosingthumbnail">Error closing thumbnail</string>
+    <string name="enterbaseurl">Enter base url</string>
+    <string name="base">Base</string>
+    <string name="entervalidurl">Enter valid base URL</string>
+    <string name="youaredevelopernow">You are developer now</string>
+    <string name="result">result</string>
+    <string name="results">results</string>
+    <string name="english" translatable="false">English</string>
+    <string name="arabic" translatable="false">Arabic</string>
+
+    <string name="completeprofile">Complete your profile</string>
+    <string name="completeprofiletext">In order to submit application, you need to complete your profile.</string>
+    <string name="continuee">Continue</string>
+    <string name="next">Next</string>
+    <string name="addyourpicture">Add your picture</string>
+    <string name="addyourpicturetext">Please upload your picture and click next</string>
+    <string name="fullnamee">Full Name</string>
+    <string name="lastupdatedon">Last Updated on</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="addmore">Add more</string>
+    <string name="name">Name</string>
+    <string name="delete">Delete</string>
+    <string name="deleterequest">Delete Request</string>
+    <string name="accounts">Accounts</string>
+    <string name="takemetoprofile">Take me to profile</string>
+    <string name="employee">Employee</string>
+    <string name="additemlist">Add item list</string>
+    <string name="searchlookupitem">Search lookup item...</string>
+    <string name="emptyitemlist">Uh oh you don\'t have any list items</string>
+    <string name="details">Details</string>
+    <string name="submissiondetails">Submission Details</string>
+    <string name="requestdetails">Request Details</string>
+    <string name="subapplications">Sub Applications</string>
+    <string name="subdefinition">Sub Definition:</string>
+    <string name="norecord">No record found!</string>
+    <string name="requestnumber">Request #:</string>
+    <string name="confirmfeedback">Confirm feedback</string>
+    <string name="rejectfeedback">Confirm Rejection</string>
+    <string name="confirmacceptance">Confirm Acceptance</string>
+    <string name="confirm">Confirm</string>
+    <string name="selectitemfeedbacktext">Please select the item you want to make visible to employee</string>
+    <string name="reasonfordecline">Reason for the decline:</string>
+    <string name="categorycolon">Category:</string>
+    <string name="idenediid">iDENEDi ID:</string>
+    <string name="submittedoncolon">Submitted On:</string>
+    <string name="pendingfor">Pending For:</string>
+    <string name="submitted">Submitted</string>
+    <string name="submissions">Submissions</string>
+    <string name="submissionszero">Submissions (0)</string>
+    <string name="approvalstages">Approval Stages</string>
+    <string name="approvalstage">Approval Stage</string>
+    <string name="requestcolon">Request:</string>
+    <string name="selectapplication">Select Application</string>
+    <string name="linkdefinition">Link Definition</string>
+    <string name="definition_name">Definition Name</string>
+    <string name="submissionsallowed">Submissions allowed</string>
+    <string name="submissionsstopped">Submissions Stopped</string>
+    <string name="viewapplications">View Applications</string>
+    <string name="stopsubmission">Stop Submission</string>
+    <string name="requesttoaction">Request to action</string>
+    <string name="seeall">See All</string>
+    <string name="allowsubmission">Allow Submission</string>
+    <string name="stopsubmissiontext">Are you sure you want to stop allowing submissions for this definition?</string>
+    <string name="allowsubmissiontext">Are you sure you want to allow submissions for this definition?</string>
+    <string name="moreinformation">More Information</string>
+    <string name="lessinformation">Less Information</string>
+    <string name="formisempty">Form is empty</string>
+    <string name="form">Form</string>
+    <string name="reassign">Reassign</string>
+    <string name="selectusers">Select User</string>
+    <string name="nousersfound">No Users found!</string>
+    <string name="nofilesattached">No Files Attached</string>
+    <string name="attachedfiles">Attached Files</string>
+
+
+    <string name="suboldestfirst">Submitted: Oldest First</string>
+    <string name="assignoldestfirst">Assigned: Oldest First</string>
+    <string name="subnewestfirst">Submitted: Newest First</string>
+    <string name="assignnewestfirst">Assigned: Newest First</string>
+    <string name="duefirst">Due: First</string>
+    <string name="duelast">Due: Last</string>
+    <string name="profile_error_ok">Take me to my profile</string>
+
+
+</resources>

@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/_15sdp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+
+
+    <com.esp.library.utilities.customcontrols.BodyText
+        android:id="@+id/tCurrencyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_gravity="start"
+        custom:customfont="regular"
+        android:textColor="@color/cooltwogrey"
+        android:textSize="@dimen/_14ssp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!--<utilities.common.MaterialSpinner
+        android:id="@+id/msCurrency"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        android:hint="@string/currency"
+        custom:customfont="bold"
+        app:spinnerMode="dropdown" />-->
+
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Currency">
+
+            <com.esp.library.utilities.customcontrols.BodyEditText
+                android:id="@+id/etCurrency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                custom:customfont="bold"
+                android:focusableInTouchMode="false"
+                android:drawableEnd="@drawable/ic_arrow_right_gray" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.esp.library.utilities.customcontrols.CustomButton
+            android:id="@+id/btnClickArea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            custom:customfont="bold"
+            android:background="@color/transparent_color" />
+
+    </FrameLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFieldLabel"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:hint="@string/value">
+
+        <com.esp.library.utilities.customcontrols.BodyEditText
+            android:id="@+id/etValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text=""
+            custom:customfont="bold"
+            android:imeOptions="actionDone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
+
+</LinearLayout>

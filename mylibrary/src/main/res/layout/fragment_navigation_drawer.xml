@@ -1,0 +1,297 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="fragments.NavigationDrawerFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btsignout"
+        android:background="@color/white"
+        android:clickable="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <include layout="@layout/drawer_header_main"></include>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@color/very_light_grey"></RelativeLayout>
+
+
+            <LinearLayout
+
+                android:id="@+id/menu_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/app_nav_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/applications_img"
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:src="@drawable/ic_tab_applicantions_sel"
+                            android:tint="@color/green" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:orientation="horizontal">
+
+
+                        <com.esp.library.utilities.customcontrols.BodyText
+                            android:id="@+id/applications"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:gravity="center_vertical"
+                            android:hint=""
+                            android:singleLine="true"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/text_14"
+                            custom:customfont="regular"
+
+
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/profile_nav_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+
+                        <ImageView
+                            android:id="@+id/profile_img"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_11sdp"
+                            android:src="@drawable/ic_tab_profile_sel"
+                            android:tint="@color/green" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:orientation="horizontal">
+
+
+                        <com.esp.library.utilities.customcontrols.BodyText
+                            android:id="@+id/txtprofile"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:gravity="center_vertical"
+                            android:hint=""
+                            android:singleLine="true"
+                            android:text="@string/profile"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/text_14"
+                            custom:customfont="regular"
+
+
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/subbmisiion_nav_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+
+
+                    <ImageView
+                        android:id="@+id/submission_img"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_11sdp"
+                        android:src="@drawable/ic_tab_profile_sel"
+                        android:tint="@color/green" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:orientation="horizontal">
+
+
+                        <com.esp.library.utilities.customcontrols.BodyText
+                            android:id="@+id/txtsubmissionrequest"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:gravity="center_vertical"
+                            android:hint=""
+                            android:singleLine="true"
+                            android:text="@string/submissionrequest"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/text_14"
+                            custom:customfont="regular"
+
+
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ass_nav_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_40dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_20dp"
+                        android:layout_marginEnd="@dimen/margin_20dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_tab_assessor_sel"
+                            android:tint="@color/dark_grey" />
+
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:orientation="horizontal">
+
+
+                        <com.esp.library.utilities.customcontrols.BodyText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:gravity="center_vertical"
+                            android:hint=""
+                            android:singleLine="true"
+                            android:text="@string/profile"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/text_14"
+                            custom:customfont="regular"
+
+                            />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rclist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <FrameLayout
+                android:id="@+id/request_fragment_org"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="gone">
+
+
+            </FrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/org_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <com.esp.library.utilities.customcontrols.CustomButton
+        android:id="@+id/btsignout"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:background="@drawable/greenbuttonselector"
+        android:text="@string/signout"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_12ssp" />
+
+</RelativeLayout>

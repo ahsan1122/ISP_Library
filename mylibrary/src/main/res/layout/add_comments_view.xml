@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10dp">
+
+        <ImageView
+            android:id="@+id/user_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="top"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:src="@drawable/ic_contact_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_5dp"
+                android:paddingStart="@dimen/margin_10dp"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/add_comments"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bg_comment_left" />
+
+                    <com.esp.library.utilities.customcontrols.BodyText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_comment"
+                        android:gravity="center|start"
+                        android:text="@string/add_comment"
+                        android:textColor="@color/light_grey"
+                        android:textSize="@dimen/text_16"
+                        custom:customfont="regular" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bg_comment_right" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dynamic_fields_div"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/margin_10dp"
+                android:paddingEnd="@dimen/margin_10dp"></LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

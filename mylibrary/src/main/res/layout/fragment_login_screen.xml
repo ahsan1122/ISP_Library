@@ -1,0 +1,339 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ScrollView
+        android:id="@+id/login_form_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/login_form_div"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_15sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_isp" />
+
+                <LinearLayout
+                    android:id="@+id/url_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/draw_bg_card_user"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.esp.library.utilities.customcontrols.BodyEditText
+                        android:id="@+id/url_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/enterurl"
+                        android:padding="@dimen/_15sdp"
+                        android:textColor="@color/dark_grey"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="@dimen/_10ssp"
+
+                        />
+
+                    <com.esp.library.utilities.customcontrols.CustomButton
+                        android:id="@+id/url_ok"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:text="@string/ok" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/login_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/txtwelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:text="@string/welcometoesp"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_15ssp"
+                    custom:customfont="bold"
+                     />
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/txtenteremailpass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/enteremailandpassword"
+                    android:textColor="@color/light_grey"
+                    custom:customfont="regular"
+                    android:textSize="@dimen/_10ssp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilFieldLabel"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    app:hintTextAppearance="@style/AddApplicationTextLabel">
+
+                    <com.esp.library.utilities.customcontrols.BodyEditText
+                        android:id="@+id/email_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="1000"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13ssp"
+                        android:theme="@style/AddApplicationEditTextField"
+                        custom:customfont="regular" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+               <!-- <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.esp.library.utilities.customcontrols.EmailEditTextWacher
+                        android:id="@+id/email_input"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableEnd="@drawable/ic_login_txt_email"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:text=""
+                        custom:customfont="regular"
+                        android:textColor="@color/dark_grey"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="@dimen/text_16"
+                        android:drawableRight="@drawable/ic_login_txt_email"
+                        android:paddingLeft="@dimen/_5sdp" />
+                </LinearLayout>-->
+
+              <!--  <RelativeLayout
+                    android:id="@+id/email_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:background="@color/very_light_grey"></RelativeLayout>-->
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+
+                        >
+
+                        <com.esp.library.utilities.customcontrols.EmailEditTextWacher
+                            android:id="@+id/password_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawableEnd="@drawable/ic_login_txt_pass"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:singleLine="true"
+                            android:text=""
+                            custom:customfont="regular"
+                            android:textColor="@color/dark_grey"
+                            android:textColorHint="@color/light_grey"
+                            android:textSize="@dimen/text_16"
+                            android:drawableRight="@drawable/ic_login_txt_pass"
+                            android:paddingLeft="@dimen/_5sdp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/password_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:background="@color/very_light_grey"
+
+                    ></RelativeLayout>-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilFieldLabelPassword"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:hintTextAppearance="@style/AddApplicationTextLabel">
+
+                    <com.esp.library.utilities.customcontrols.BodyEditText
+                        android:id="@+id/password_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:maxLength="1000"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13ssp"
+                        android:theme="@style/AddApplicationEditTextField"
+                        custom:customfont="regular" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.esp.library.utilities.customcontrols.CustomButton
+                    android:id="@+id/login_btn"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:background="@drawable/draw_signin_button"
+                    android:text="@string/sign_in"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+                    custom:customfont="regular"
+
+                    />
+
+                <com.esp.library.utilities.customcontrols.BodyText
+                    android:id="@+id/txtor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/or"
+                    android:textColor="@color/green"
+                    custom:customfont="regular"
+                    android:textSize="@dimen/_14ssp" />
+
+                <com.esp.library.utilities.customcontrols.CustomButton
+                    android:id="@+id/idenedi_login_btn"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:background="@drawable/idenedibuttonselector"
+                    android:text="@string/logineithidenedi"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+                    custom:customfont="regular"
+
+                    />
+
+
+                <com.esp.library.utilities.customcontrols.CustomButton
+                    android:id="@+id/forgot_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@null"
+                    android:text="@string/forgotpassword"
+                    android:textAllCaps="false"
+                    android:textColor="@color/green"
+                    custom:customfont="regular"
+                    android:textSize="@dimen/_10ssp" />
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <com.esp.library.utilities.customcontrols.BodyText
+                        android:id="@+id/txtlanguage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="@string/language"
+                        android:textColor="@color/mid_grey"
+                        android:textSize="@dimen/_13ssp"
+                        custom:customfont="regular" />
+
+                    <Spinner
+                        android:id="@+id/splanguage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@+id/txtlanguage"
+                        android:layout_gravity="end"
+                        style="@style/SpinnerTheme"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dialog"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_toRightOf="@+id/txtlanguage"></Spinner>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
