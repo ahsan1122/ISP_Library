@@ -16,7 +16,7 @@
         <com.esp.library.utilities.customcontrols.BodyText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/enterprise_submission_platform"
+            android:text="@string/invoice_submission_platform"
             android:textColor="@color/light_grey"
             android:textSize="@dimen/text_12"
             custom:customfont="light"

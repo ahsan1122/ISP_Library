@@ -44,7 +44,7 @@ class LoginScreenActivity : BaseActivity(), ListPersonaDAOAdapter.RefreshToken{/
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_screen)
         initailize()
-        
+
 
         if (Shared.getInstance().ReadPref("url", "base_url", context) != null) {
             Constants.base_url = Shared.getInstance().ReadPref("url", "base_url", context) + Constants.base_url_api
